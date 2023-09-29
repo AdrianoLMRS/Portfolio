@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+body {
+  background-color: #dffdd8;
+}
+
+#header {
+  background-color: #dffdd8;
+  height: 620px;
+  position: relative;
+}
+
+#header div.header-div1 {
+  background-color: rgba(217, 230, 245, 0.044);
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  top: 90px;
+  left: 160px;
+}
+
+#header .header-div1 p:nth-child(1) {
+  font-family: 'EB Garamond', serif;
+  font-size: 22px;
+  font-weight: bold;
+  color: #5bf58c;
+}
+
+#header .header-div1 p:nth-child(2) {
+  font-family: 'Sacramento', cursive;
+  font-size: 100px;
+  font-weight: bold;
+  color: #ec0ea6;
+  line-height: 1;
+  display: inline;
+  position: relative;
+  top: -12px;
+  left: -19px;
+}
+
+#header .header-div1 p:nth-child(3) {
+  font-family: 'Playfair Display', serif;
+  font-weight: 769;
+  color: #efb1fd;
+  position: relative;
+  left: 70px;
+  top: -40px;
+}
+
+#header .header-div2 {
+  left: -12px;
+}
+
+
+/* --text: #061801;
+--background: #dffdd8;
+--primary: #5bf58c;
+--secondary: #f3cafc;
+--accent: #ec0ea6; */
