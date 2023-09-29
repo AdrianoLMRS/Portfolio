@@ -3,11 +3,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 
 body {
-  background-color: #dffdd8;
+  background-color: #fbfcfe;
 }
 
 #header {
-  background-color: #dffdd8;
+  background-color: #fbfcfe;
   height: 620px;
   position: relative;
 }
@@ -25,14 +25,14 @@ body {
   font-family: 'EB Garamond', serif;
   font-size: 22px;
   font-weight: bold;
-  color: #5bf58c;
+  color: #88b2dd;
 }
 
 #header .header-div1 p:nth-child(2) {
   font-family: 'Sacramento', cursive;
   font-size: 100px;
   font-weight: bold;
-  color: #ec0ea6;
+  color: #3473b2;
   line-height: 1;
   display: inline;
   position: relative;
@@ -43,19 +43,76 @@ body {
 #header .header-div1 p:nth-child(3) {
   font-family: 'Playfair Display', serif;
   font-weight: 769;
-  color: #efb1fd;
+  color: #f3bcff;
   position: relative;
   left: 70px;
   top: -40px;
 }
 
-#header .header-div2 {
-  left: -12px;
+/* .header-div2 {
+  
+} */
+
+
+.header-div2{
+  position: relative; /* Make the parent container positioned */
+  width: 600px; /* Set the width of the container as needed */
+  height: 600px; /* Set the height of the container as needed */
+  /* background-color: lightgray; Just for visualization */
+  left: 600px;
+  top: -35px;
+}
+
+.header-div2 div{
+  position: absolute; /* Position the inner div absolutely within the parent */
+  top: 50%; /* Adjust the top position as needed */
+  left: 50%; /* Adjust the left position as needed */
+  transform: translate(-50%, -50%); /* Center the inner div */
+  font-size: 350px; /* Adjust the font size as needed */
+  color: rgb(255, 0, 119); /* Set the text color as needed */
+  animation: fontColor-change 10s infinite; /* Define a animação com duração de 10s e repetição infinita */
 }
 
 
+@keyframes fontColor-change {
+    0% {
+        color: red;
+    }
+    25% {
+        color: blue;
+    }
+    50% {
+        color: green;
+    }
+    75% {
+        color: yellow;
+    }
+    100% {
+        color: purple;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* First Style */
 /* --text: #061801;
 --background: #dffdd8;
 --primary: #5bf58c;
 --secondary: #f3cafc;
 --accent: #ec0ea6; */
+
+/* Second Style */
+/* --text: #091420;
+--background: #fbfcfe;
+--primary: #88b2dd;
+--secondary: #c4d9ee;
+--accent: #3473b2; */
+
+
+
