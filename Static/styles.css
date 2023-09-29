@@ -2,6 +2,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Sacramento&family=Satisfy&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 
+
+/* FIX LATER */ 
+/* *,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+} */
+
+
 body {
   background-color: #fbfcfe;
 }
@@ -13,19 +24,44 @@ body {
 }
 
 #header div.header-div1 {
-  background-color: rgba(217, 230, 245, 0.044);
+  user-select: none;
   position: absolute;
-  width: 400px;
-  height: 400px;
+  width: 300px;
+  height: 300px;
   top: 90px;
   left: 160px;
 }
+
+
+/* #header div.header-div1:hover {
+  animation: toggleSize 3s forwards;
+  transform-origin: center;
+}
+
+#header div.header-div1:not(:hover) {
+  animation: toggleSize 3s forwards;
+  transform-origin: center;
+} */
+
+#header div.header-div1:hover {
+  animation: grow 2s forwards;
+}
+
+
+#header div.header-div1:not(:hover){
+  animation: shrink 2s forwards;
+}
+
 
 #header .header-div1 p:nth-child(1) {
   font-family: 'EB Garamond', serif;
   font-size: 22px;
   font-weight: bold;
-  color: #88b2dd;
+  color: #88b3ddef;
+}
+
+#header .header-div1 p:nth-child(1):hover {
+  color: #5aadff;
 }
 
 #header .header-div1 p:nth-child(2) {
@@ -40,6 +76,10 @@ body {
   left: -19px;
 }
 
+#header .header-div1 p:nth-child(2):hover {
+  color: #2c80d4;
+}
+
 #header .header-div1 p:nth-child(3) {
   font-family: 'Playfair Display', serif;
   font-weight: 769;
@@ -49,9 +89,31 @@ body {
   top: -40px;
 }
 
-/* .header-div2 {
-  
-} */
+#header .header-div1 p:nth-child(3):hover {
+  color: #eca3fd;
+}
+
+.header-div2:hover {
+  animation: grow 2s forwards;
+}
+
+.header-div2:not(:hover) {
+  animation: shrink 2s forwards;
+}
+
+.rainbow-font {
+  -webkit-animation: hueanimation 9.5s infinite linear;
+  /* color: rgb(255, 255, 0); */
+}
+
+@keyframes hueanimation {
+  from {
+      -webkit-filter: hue-rotate(0deg)
+  }
+  to {
+      -webkit-filter: hue-rotate(360deg)
+  }
+}
 
 
 .header-div2{
@@ -64,17 +126,68 @@ body {
 }
 
 .header-div2 div{
+  user-select: none;
   position: absolute; /* Position the inner div absolutely within the parent */
   top: 50%; /* Adjust the top position as needed */
   left: 50%; /* Adjust the left position as needed */
   transform: translate(-50%, -50%); /* Center the inner div */
   font-size: 350px; /* Adjust the font size as needed */
   color: rgb(255, 0, 119); /* Set the text color as needed */
-  animation: fontColor-change 10s infinite; /* Define a animação com duração de 10s e repetição infinita */
+   /* animation: fontColor-change 10s infinite;*/ /* Define a animação com duração de 10s e repetição infinita */
 }
 
 
-@keyframes fontColor-change {
+@keyframes toggleSize {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+
+
+@keyframes grow {
+  0% {
+    transform: scale(1); /* Tamanho inicial (normal) */
+  }
+  100% {
+    transform: scale(1.1); /* Tamanho aumentado em 10% */
+  }
+}
+
+@keyframes shrink {
+  0% {
+    transform: scale(1.1); /* Tamanho inicial (normal) */
+  }
+  100% {
+    transform: scale(1.0); /* Tamanho diminuido em 10% */
+  }
+}
+
+
+/* @keyframes grow {
+  0% {
+    font-size: calc(1em + 1px);
+  }
+  25% {
+    font-size: calc(1em + 2px);
+  }
+  50% {
+    font-size: calc(1em + 3px);
+  }
+  75% {
+    font-size: calc(1em + 4px);
+  }
+  100% {
+    font-size: calc(1em + 5px);
+  }
+} */
+
+
+
+/* @keyframes fontColor-change {
     0% {
         color: red;
     }
@@ -90,7 +203,7 @@ body {
     100% {
         color: purple;
     }
-}
+} */
 
 
 
