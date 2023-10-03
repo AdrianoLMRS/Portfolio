@@ -1,3 +1,7 @@
+/** HEADER FILE **/
+
+
+/**  ==========================  IMPORTS  ==========================  **/
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital@1&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sacramento&family=Satisfy&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
@@ -17,6 +21,7 @@ body {
   background-color: #fbfcfe;
 }
 
+
 #header {
   background-color: #fbfcfe;
   height: 620px;
@@ -25,7 +30,7 @@ body {
 
 #header div.header-div1 {
   user-select: none;
-  position: absolute;
+  position: relative;
   width: 300px;
   height: 300px;
   top: 90px;
@@ -33,23 +38,17 @@ body {
 }
 
 
-/* #header div.header-div1:hover {
-  animation: toggleSize 3s forwards;
-  transform-origin: center;
-}
-
-#header div.header-div1:not(:hover) {
-  animation: toggleSize 3s forwards;
-  transform-origin: center;
-} */
-
 #header div.header-div1:hover {
   animation: grow 2s forwards;
+  animation-timing-function: ease;
+  /* animation-play-state: paused; */
 }
 
 
 #header div.header-div1:not(:hover){
   animation: shrink 2s forwards;
+  animation-timing-function: ease;
+  /* animation-play-state: paused; */
 }
 
 
@@ -93,6 +92,15 @@ body {
   color: #eca3fd;
 }
 
+.header-div2{
+  position: absolute; /* Make the parent container positioned */
+  width: 400px; /* Set the width of the container as needed */
+  height: 200px; /* Set the height of the container as needed */
+  /* background-color: lightgray; Just for visualization */
+  left: 750px;
+  top: 140px;
+}
+
 .header-div2:hover {
   animation: grow 2s forwards;
 }
@@ -106,126 +114,40 @@ body {
   /* color: rgb(255, 255, 0); */
 }
 
-@keyframes hueanimation {
-  from {
-      -webkit-filter: hue-rotate(0deg)
-  }
-  to {
-      -webkit-filter: hue-rotate(360deg)
-  }
-}
 
-
-.header-div2{
-  position: relative; /* Make the parent container positioned */
-  width: 600px; /* Set the width of the container as needed */
-  height: 600px; /* Set the height of the container as needed */
-  /* background-color: lightgray; Just for visualization */
-  left: 600px;
-  top: -35px;
-}
 
 .header-div2 div{
   user-select: none;
   position: absolute; /* Position the inner div absolutely within the parent */
-  top: 50%; /* Adjust the top position as needed */
+  top: 90%; /* Adjust the top position as needed */
   left: 50%; /* Adjust the left position as needed */
   transform: translate(-50%, -50%); /* Center the inner div */
   font-size: 350px; /* Adjust the font size as needed */
   color: rgb(255, 0, 119); /* Set the text color as needed */
-   /* animation: fontColor-change 10s infinite;*/ /* Define a animação com duração de 10s e repetição infinita */
+  text-shadow: 5px 2px 6px rgba(0, 0, 0, 0.5);
 }
 
-
-@keyframes toggleSize {
-  0%, 100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
+.header-div2 div:hover {
+  animation: ch-shadow 4s forwards;
 }
-
-
-
-@keyframes grow {
-  0% {
-    transform: scale(1); /* Tamanho inicial (normal) */
-  }
-  100% {
-    transform: scale(1.1); /* Tamanho aumentado em 10% */
-  }
-}
-
-@keyframes shrink {
-  0% {
-    transform: scale(1.1); /* Tamanho inicial (normal) */
-  }
-  100% {
-    transform: scale(1.0); /* Tamanho diminuido em 10% */
-  }
-}
-
-
-/* @keyframes grow {
-  0% {
-    font-size: calc(1em + 1px);
-  }
-  25% {
-    font-size: calc(1em + 2px);
-  }
-  50% {
-    font-size: calc(1em + 3px);
-  }
-  75% {
-    font-size: calc(1em + 4px);
-  }
-  100% {
-    font-size: calc(1em + 5px);
-  }
-} */
-
-
-
-/* @keyframes fontColor-change {
-    0% {
-        color: red;
-    }
-    25% {
-        color: blue;
-    }
-    50% {
-        color: green;
-    }
-    75% {
-        color: yellow;
-    }
-    100% {
-        color: purple;
-    }
-} */
-
-
-
-
-
-
 
 
 
 /* First Style */
+/* --text: #091420;
+--background: #fbfcfe;
+--primary: #88b2dd;
+--secondary: #c4d9ee;
+--accent: #3473b2; */
+
+
+/* Second Style */
 /* --text: #061801;
 --background: #dffdd8;
 --primary: #5bf58c;
 --secondary: #f3cafc;
 --accent: #ec0ea6; */
 
-/* Second Style */
-/* --text: #091420;
---background: #fbfcfe;
---primary: #88b2dd;
---secondary: #c4d9ee;
---accent: #3473b2; */
 
 
 

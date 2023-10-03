@@ -1,0 +1,51 @@
+/** HEADER ANIMATIONS FILE **/
+
+
+@keyframes hueanimation {
+  from {
+      -webkit-filter: hue-rotate(0deg)
+  }
+  to {
+      -webkit-filter: hue-rotate(360deg)
+  }
+}
+
+@keyframes grow {
+  0% {
+    transform: scale(1); /* Tamanho inicial (normal) */
+  }
+  100% {
+    transform: scale(1.1); /* Tamanho aumentado em 10% */
+  }
+}
+
+@keyframes shrink {
+  0% {
+    transform: scale(1.1); /* Tamanho inicial (normal) */
+  }
+  100% {
+    transform: scale(1.0); /* Tamanho diminuido em 10% */
+  }
+}
+
+@keyframes ch-shadow{
+  0% {
+    text-shadow: 5.5px 2.5px 4px rgba(0, 0, 0, 0.5);
+  }
+  10% {
+    text-shadow: 6px 2.5px 4px rgba(0, 0, 0, 0.5);
+  }
+  25% {
+    text-shadow: 7px 3px 4.5px rgba(0, 0, 0, 0.5);
+  }
+  50% {
+    text-shadow: 8px 3.5px 5.3px rgba(0, 0, 0, 0.5);
+  }
+  75% {
+    text-shadow: 9px 3.9px 5.7px rgba(0, 0, 0, 0.5);
+  }
+  100% {
+    text-shadow: 10px 4px 6px rgba(0, 0, 0, 0.5);
+  }
+}
+
