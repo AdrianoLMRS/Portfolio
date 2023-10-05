@@ -7,15 +7,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 
 
-/* FIX LATER */ 
-/* *,
-*::after,
-*::before {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-} */
-
 
 body {
   background-color: #fbfcfe;
@@ -33,22 +24,14 @@ body {
   position: relative;
   width: 300px;
   height: 300px;
-  top: 90px;
+  top: 135px;
   left: 160px;
+  transition: 0.5s;
 }
 
 
 #header div.header-div1:hover {
-  animation: grow 2s forwards;
-  animation-timing-function: ease;
-  /* animation-play-state: paused; */
-}
-
-
-#header div.header-div1:not(:hover){
-  animation: shrink 2s forwards;
-  animation-timing-function: ease;
-  /* animation-play-state: paused; */
+  transform: scale(1.1);
 }
 
 
@@ -57,6 +40,8 @@ body {
   font-size: 22px;
   font-weight: bold;
   color: #88b3ddef;
+  position: relative;
+  top: -10px;
 }
 
 #header .header-div1 p:nth-child(1):hover {
@@ -70,7 +55,7 @@ body {
   color: #3473b2;
   line-height: 1;
   display: inline;
-  position: relative;
+  /* position: relative; */
   top: -12px;
   left: -19px;
 }
@@ -83,7 +68,7 @@ body {
   font-family: 'Playfair Display', serif;
   font-weight: 769;
   color: #f3bcff;
-  position: relative;
+  /* position: relative; */
   left: 70px;
   top: -40px;
 }
@@ -99,15 +84,13 @@ body {
   /* background-color: lightgray; Just for visualization */
   left: 750px;
   top: 140px;
+  transition: transform 0.5s;
 }
 
 .header-div2:hover {
-  animation: grow 2s forwards;
+  transform: scale(1.1);
 }
 
-.header-div2:not(:hover) {
-  animation: shrink 2s forwards;
-}
 
 .rainbow-font {
   -webkit-animation: hueanimation 9.5s infinite linear;
@@ -119,7 +102,7 @@ body {
 .header-div2 div{
   user-select: none;
   position: absolute; /* Position the inner div absolutely within the parent */
-  top: 90%; /* Adjust the top position as needed */
+  top: 100%; /* Adjust the top position as needed */
   left: 50%; /* Adjust the left position as needed */
   transform: translate(-50%, -50%); /* Center the inner div */
   font-size: 350px; /* Adjust the font size as needed */

@@ -1,9 +1,16 @@
+/**   NAV-BAR FOR HEADER   **/
+
+
+/*  -- IMPORT FONT -- */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 
 
 #nav-bar {
-  background-color: #88b2dd;
+  /* background-color: #88b2dd; */
   padding: 10px 0;
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 100;
 }
 
 #nav-bar ul {
@@ -20,22 +27,34 @@
 
 #nav-bar button {
   text-decoration: none;
-  background-color: #88b2dd;
+  background-color: #00000000;
+  border-radius: 15%;
   color: #091420;
   font-weight: bolder;
   font-size: 36px;
   border: none;
   padding: 10px 20px;
+  transition: color 0.3s, transform 0.5s, text-shadow 1s, background-color 0.5s;
 }
 
 #nav-bar button:hover {
-  color: #0008ff;
-  background-color: #85c2ff;
-  transition: color 1s, background-color 1s;
-  border: 2px solid black;
-  
-  border-radius: 50%;
+  color: #FFA500;
+  background-color: rgba(3, 248, 248, 0.1);
+  transform: scale(1.1);
+  text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.155);
+
+  /* border-bottom: 2px solid black;        --  Maybe...  */
 }
+
+/**  TO FIX  **/
+/* #house-icon {
+  display: none;
+}
+
+
+#nav-bar button:nth-child(1):hover + #house-icon {
+  display: none;
+} */
 
 
 
