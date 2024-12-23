@@ -1,0 +1,15 @@
+STACK IDEA
+
+HTML - programming
+CSS - programming
+TS - programming
+SASS - css preprocessing
+react - frontend lib
+next.js - react framework
+vite - build
+node.js - runtime
+jest - for testing
+docker - container
+render - deploy
+CI/CD devops - github actions
+git - version control
