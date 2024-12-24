@@ -1,9 +1,10 @@
-import '@styles/App.css'
-import Header from '@components/header/Header';
+import '@styles/App.scss'
+// import Header from '@components/header/Header';
+import Navbar from '@components/navbar/Navbar';
 
 function App() {
   return (
-    <Header/>
+    <Navbar/>
   );
 }
 

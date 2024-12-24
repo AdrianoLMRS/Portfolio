@@ -1,3 +1,5 @@
+@use '@styles/mixins' as mixins;
+
 $red: hsl(0, 75%, 40%);
 
 header {
@@ -5,9 +7,6 @@ header {
     background-color: darken($red, 20%);
     li a {
         list-style: none;
-        display: inline-flex;
-        flex-direction: row;
-        justify-content: space-around;
         width: 100%;
         color: lighten($red, 25%) !important;
     }
