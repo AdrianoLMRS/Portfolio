@@ -1,0 +1,21 @@
+// $primary: hsla(211, 53%, 11%, 1);
+// $secondary: hsla(219, 37%, 17%, 1);
+// $color3: hsla(212, 29%, 36%, 1);
+// $color4: hsla(214, 23%, 56%, 1);
+// $color5: hsla(75, 6%, 87%, 1);
+
+$primary: #191919;
+$secondary: snow;
+$color3: #6E8894;
+$color4: #BC4B51;
+$color5: #FF220C;
+$color6: #FFB900;
+
+$font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+$base-spacing: 16px;
+
+:root {
+    font-family: $font-family;
+    background-color: $primary;
+    color: $secondary;
+}
