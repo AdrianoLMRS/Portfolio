@@ -8,6 +8,7 @@
     "composite": true,
     "baseUrl": "./", 
     "paths": {
+      "@public/*": ["public/*"], 
       "@styles/*": ["src/assets/styles/*"], 
       "@img/*": ["src/assets/images/*"], 
       "@components/*": ["src/components/*"], 

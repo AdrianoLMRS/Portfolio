@@ -1,0 +1,8 @@
+@keyframes terminal-bg {
+    0%, 100% {
+        background-image: url(@public/terminal.webp);
+    }
+    50% {
+        background-image: url(@public/terminal.active.webp);
+    }
+  }
