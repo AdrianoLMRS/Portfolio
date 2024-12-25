@@ -54,9 +54,9 @@ nav.navbar {
             height: var(--_scale);
             right: 0;
             bottom: 0;
-            transition: all 300ms ease;
             opacity: 0;
             background-size: cover;
+            transition: all 300ms ease;
 
             --_scale: 16px;
         }
@@ -78,9 +78,7 @@ nav.navbar {
             &::after {
                 content: '👋';
                 // background-image: url(@public/greeting.png);
-                animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
-                animation-duration: 2.5s;        /* Change to speed up or slow down */
-                animation-iteration-count: infinite;  /* Never stop waving :) */
+                animation: wave-animation 2.5s linear infinite;
             }
         }
 
