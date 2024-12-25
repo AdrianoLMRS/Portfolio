@@ -55,20 +55,39 @@ nav.navbar {
             right: 0;
             bottom: 0;
             transition: all 300ms ease;
+            opacity: 0;
+            background-size: cover;
 
             --_scale: 16px;
         }
 
         &[data-content="terminal"] {
             &::after {
-                opacity: 0;
-                background-size: cover;
                 animation: terminal-bg 1s infinite;
             }
         }
 
-        &[data-content="home"] {
+        &[data-content="projects"] {
+            &::after {
+                background-image: url(@public/gear.svg);
+                animation: spin 1.5s linear infinite;
+            }
+        }
 
+        &[data-content="about"] {
+            &::after {
+                content: '👋';
+                // background-image: url(@public/greeting.png);
+                animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
+                animation-duration: 2.5s;        /* Change to speed up or slow down */
+                animation-iteration-count: infinite;  /* Never stop waving :) */
+            }
+        }
+
+        &[data-content="home"] {
+            &::after {
+                background-image: url(@public/home.svg);
+            }
         }
     }    
 
