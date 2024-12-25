@@ -13,6 +13,15 @@ $color6: #FFB900;
 
 $font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 $base-spacing: 16px;
+$gap: 16px;
+$gap-big: $gap * 2;
+$font-weights: (
+    regular: 400,
+    medium: 500,
+    bold: 700,
+    bolder: 800,
+    mega-bold: 900,
+);
 
 :root {
     font-family: $font-family;

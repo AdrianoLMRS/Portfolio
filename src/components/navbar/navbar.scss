@@ -1,27 +1,45 @@
-@use '@styles/_variables' as *;
+@use '@styles/variables' as *;
+@use '@styles/utils' as *;
+@import '@styles/resets';
 
 nav.navbar {
     width: 100%;
     height: 50px;
     display: flex;
     flex-direction: row;
-    justify-content: stretch;
+    justify-content: flex-end;
 
     ul {
         display: flex;
         flex-direction: row;
-        flex-grow: 1;
-        justify-content: space-around;
+        align-items: center;
+        justify-content: flex-start;
+        direction: rtl;
+        gap: $gap-big;
     }
     
     li {
         list-style: none;
+        padding: 25px 35px 25px 35px;
     }
 
     a {
+        --_color: $secondary;
         text-decoration: none;  
-        font-weight: bolder;
+        font-weight: weight(bold);
         letter-spacing: 1px;
-        color: $secondary;
-    }
+        color: var(--_color, snow);
+        display: inline-block;
+        transition: all 300ms ease;
+    
+        &:hover {
+            transform: scale(1.05);
+            color: $color6;
+        }
+    }    
+
+}
+
+hr {
+    opacity: 0.3;
 }
