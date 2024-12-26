@@ -4,6 +4,12 @@
 // $color4: hsla(214, 23%, 56%, 1);
 // $color5: hsla(75, 6%, 87%, 1);
 
+// Common breakpoints for responsiveness
+$breakpoint-sm: 576px;  // small
+$breakpoint-md: 768px;  // medium
+$breakpoint-lg: 992px;  // large
+$breakpoint-xl: 1200px; // extra-large
+
 $primary: #191919;
 $secondary: snow; // #fffafa
 $color3: #6E8894;
@@ -20,8 +26,15 @@ $font-weights: (
     medium: 500,
     bold: 700,
     bolder: 800,
-    mega-bold: 900,
+    extra-bold: 900,
 );
+$font-sizes: (
+    regular: 16px,
+    medium: 24px,
+    large: 36px,
+);
+
+$border-radius-btn: 8px;
 
 :root {
     font-family: $font-family;

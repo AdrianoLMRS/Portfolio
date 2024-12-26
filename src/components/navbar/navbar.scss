@@ -10,7 +10,7 @@ nav.navbar {
     flex-direction: row;
     justify-content: flex-end;
 
-    ul {
+    .nav-ul {
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -18,79 +18,130 @@ nav.navbar {
         direction: rtl;
         gap: $gap-big;
     }
-    
-    li {
+   
+    .nav-li {
         list-style: none;
         padding: 25px 35px 25px 35px;
     }
-
-    a {
+    .nav-item {
         --_color: $secondary;
         text-decoration: none;  
         font-weight: weight(bold);
         letter-spacing: 1px;
         color: var(--_color, snow);
-        display: inline-block;
-        position: relative;
-        transition: all 300ms ease;
-    
-        &:hover {
-            transform: scale(1.05);
-            color: $color6;
+    }    
+}
+hr {  opacity: 0.3;  }
 
-            &::after {
-                opacity: 1 !important;
-                transform: rotate(15deg);
-                bottom: -5px;
-                right: -20px;
-            }
-        }
+ .nav-item {
+    font-weight: weight(bolder);
+    text-decoration: none;
+    letter-spacing: 1px;
+    display: inline-block;
+    position: relative;
+    color: $primary;
+    transition: all 300ms ease;
+    &:hover {
+        transform: scale(1.05);
+        color: $color6;
 
         &::after {
-            content: "";
-            position: absolute;
-            z-index: -1;
-            width: var(--_scale);
-            height: var(--_scale);
-            right: 0;
-            bottom: 0;
-            opacity: 0;
-            background-size: cover;
-            transition: all 300ms ease;
-
-            --_scale: 16px;
+            opacity: 1 !important;
+            transform: rotate(15deg);
+            bottom: -5px;
+            right: -20px;
         }
+    }
 
-        &[data-content="terminal"] {
-            &::after {
-                animation: terminal-bg 1s infinite;
-            }
-        }
+    &::after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        width: var(--_scale);
+        height: var(--_scale);
+        right: 0;
+        bottom: 0;
+        opacity: 0;
+        background-size: cover;
+        transition: all 300ms ease;
 
-        &[data-content="projects"] {
-            &::after {
-                background-image: url(@public/gear.svg);
-                animation: spin 1.5s linear infinite;
-            }
-        }
+        --_scale: 16px;
+    }
 
-        &[data-content="about"] {
-            &::after {
-                content: '👋';
-                // background-image: url(@public/greeting.png);
-                animation: wave-animation 2.5s linear infinite;
-            }
+    &[data-content="terminal"] {
+        &::after {
+            animation: terminal-bg 1s infinite;
+            filter: invert(1);
         }
+    }
 
-        &[data-content="home"] {
-            &::after {
-                background-image: url(@public/home.svg);
-            }
+    &[data-content="projects"] {
+        &::after {
+            background-image: url(@public/gear.svg);
+            animation: spin 1.5s linear infinite;
+            filter: invert(1);
         }
-    }    
+    }
+
+    &[data-content="about"] {
+        &::after {
+            content: '👋';
+            // background-image: url(@public/greeting.png);
+            animation: wave-animation 2.5s linear infinite;
+        }
+    }
+
+    &[data-content="home"] {
+        &::after {
+            background-image: url(@public/home.svg);
+        }
+    }
+ }
+
+nav.sidebar {
+    position: fixed;
+    right: -400px;
+    min-width: 400px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: $secondary;
+    transition: right 300ms ease-in;
+
+    .nav-ul {
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        row-gap: $gap-big;
+    }
+
+    .nav-li {
+
+    }
+
+
+
+    .nav-item {
+        font-size: size(medium);
+    }
 
 }
 
-hr {
-    opacity: 0.3;
+.nav-btn {
+    --_border-radius: ;
+    position: absolute;
+    background-image: url(@public/menu.svg);
+    background-size: contain;
+    background-color: $primary;
+    border-top-left-radius: $border-radius-btn;
+    border-bottom-left-radius: $border-radius-btn;
+    right: 1px;
+    top: 15%;
+    border: none;
+    padding: 16px;
+    filter: invert(1);
+    transition: right 300ms ease-in;
 }

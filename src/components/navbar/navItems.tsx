@@ -29,10 +29,10 @@ type NavItem = { name: string; href: string };
  */
 export function navItems(...items: NavItem[]) {
   return (
-    <ul>
+    <ul className="nav-ul">
       {items.map((item, index) => (
-        <li key={index}>
-          <a href={item.href} data-content={item.name.toLocaleLowerCase()} >{item.name}</a>
+        <li className="nav-li" key={index}>
+          <a href={item.href} className="nav-item" data-content={item.name.toLocaleLowerCase()} >{item.name}</a>
         </li>
       ))}
     </ul>

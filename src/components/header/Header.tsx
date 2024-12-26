@@ -4,8 +4,7 @@ import './header.scss'
 function Header() {
     return (
         <header>
-            <h1>Hello world!!!</h1>
-            <nav>
+            <nav className='navbar'>
                 <ul>
                     <li><a href="/">Home</a></li>
                     <li><a href="/about">About</a></li>

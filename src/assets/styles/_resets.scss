@@ -4,6 +4,11 @@
     padding: 0;
 }
 
+html, body {
+    zoom: 100%;
+    overflow-x: hidden;
+}
+
 img {
     display: block;
     max-width: 100%;
