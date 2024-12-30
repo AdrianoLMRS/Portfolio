@@ -5,7 +5,7 @@
 // $color5: hsla(75, 6%, 87%, 1);
 
 // Common breakpoints for responsiveness
-$breakpoint-sm: 576px;  // small
+$breakpoint-sm: 602px;  // small
 $breakpoint-md: 768px;  // medium
 $breakpoint-lg: 992px;  // large
 $breakpoint-xl: 1200px; // extra-large
@@ -40,4 +40,9 @@ $border-radius-btn: 8px;
     font-family: $font-family;
     background-color: $primary;
     color: $secondary;
+
+    --sm-breakpoint: #{$breakpoint-sm};
+    --md-breakpoint: #{$breakpoint-md};
+    --lg-breakpoint: #{$breakpoint-lg};
+    --xl-breakpoint: #{$breakpoint-xl};
 }

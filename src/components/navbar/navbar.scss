@@ -3,6 +3,10 @@
 @use '@styles/animations' as *;
 @import '@styles/resets';
 
+nav {
+    overflow: hidden;
+}
+
 nav.navbar {
     width: 100%;
     height: 50px;
@@ -71,7 +75,9 @@ hr {  opacity: 0.3;  }
     &[data-content="terminal"] {
         &::after {
             animation: terminal-bg 1s infinite;
-            filter: invert(1);
+            @media (max-width: $breakpoint-sm) {
+                filter: invert(1);
+            }
         }
     }
 
@@ -79,7 +85,9 @@ hr {  opacity: 0.3;  }
         &::after {
             background-image: url(@public/gear.svg);
             animation: spin 1.5s linear infinite;
-            filter: invert(1);
+            @media (max-width: $breakpoint-sm) {
+                filter: invert(1);
+            }        
         }
     }
 
@@ -118,12 +126,6 @@ nav.sidebar {
         row-gap: $gap-big;
     }
 
-    .nav-li {
-
-    }
-
-
-
     .nav-item {
         font-size: size(medium);
     }
@@ -131,7 +133,6 @@ nav.sidebar {
 }
 
 .nav-btn {
-    --_border-radius: ;
     position: absolute;
     background-image: url(@public/menu.svg);
     background-size: contain;
@@ -142,6 +143,13 @@ nav.sidebar {
     top: 15%;
     border: none;
     padding: 16px;
+    cursor: pointer;
     filter: invert(1);
     transition: right 300ms ease-in;
+}
+
+@media (min-width: $breakpoint-sm) {
+    .nav-btn {
+        display: none;
+    }
 }
