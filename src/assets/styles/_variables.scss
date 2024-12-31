@@ -38,6 +38,16 @@ $font-sizes: (
 
 $border-radius-btn: 8px;
 
+$ba-light: lighten($primary, 10%);
+$ba-deg: -45deg;
+$ba-gradient: linear-gradient(
+  $ba-deg,
+  $ba-light,
+  $primary,  lighten($primary, 0.1%),  $primary, $primary, $primary, $primary,  $primary,  lighten($primary, 0.1%),  $primary,  $primary,  
+  lighten($primary, 0.1%),  $primary,  $primary,  $primary,  $primary,  $primary,  $primary,  $primary,  $primary,  $primary, /* primary */
+  $ba-light
+);
+
 :root {
     font-family: $font-family;
     background-color: $primary;
