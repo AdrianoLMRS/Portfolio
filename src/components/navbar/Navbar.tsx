@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { navItems } from './navItems';
-import './navbar.scss';
+import './index.scss';
 
 function getCssVariable(varName: string) : number {
     return parseInt(getComputedStyle(document.documentElement).getPropertyValue(varName), 10);

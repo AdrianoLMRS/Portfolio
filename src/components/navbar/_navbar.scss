@@ -1,0 +1,37 @@
+@use '@styles/variables' as *;
+@use '@styles/utils' as *;
+@use '@styles/animations' as *;
+@import '@styles/resets';
+
+nav.navbar {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+    .nav-ul {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        direction: rtl;
+        gap: $gap-big;
+    }
+   
+    .nav-li {
+        list-style: none;
+        padding: 25px 35px 25px 35px;
+    }
+    .nav-item {
+        --_color: $secondary;
+        text-decoration: none;  
+        font-weight: weight(bold);
+        letter-spacing: 1px;
+        color: var(--_color, snow);
+    }    
+}
+hr {  opacity: 0.3;  }
+
+
+

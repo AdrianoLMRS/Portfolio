@@ -1,0 +1,30 @@
+@use '@styles/variables' as *;
+@use '@styles/utils' as *;
+@use '@styles/animations' as *;
+@import '@styles/resets';
+
+nav.sidebar {
+    position: fixed;
+    right: -400px;
+    min-width: 400px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: $secondary;
+    transition: right 300ms ease-in;
+
+    .nav-ul {
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        row-gap: $gap-big;
+    }
+
+    .nav-item {
+        font-size: size(medium);
+    }
+
+}
