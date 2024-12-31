@@ -75,23 +75,3 @@ nav {
         }
     }
 }
-
- .nav-btn {
-    position: absolute;
-    background-image: url(@public/menu.svg);
-    background-size: contain;
-    background-color: $primary;
-    border-top-left-radius: $border-radius-btn;
-    border-bottom-left-radius: $border-radius-btn;
-    right: 1px;
-    top: 15%;
-    border: none;
-    padding: 16px;
-    cursor: pointer;
-    filter: invert(1);
-    transition: right 300ms ease-in;
-    
-    @media (min-width: $breakpoint-sm) {
-        display: none;
-    }
-}

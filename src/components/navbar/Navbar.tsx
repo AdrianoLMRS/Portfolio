@@ -6,16 +6,21 @@ function getCssVariable(varName: string) : number {
     return parseInt(getComputedStyle(document.documentElement).getPropertyValue(varName), 10);
 }
 
-const positionNavbar = () => {
+const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
+
+const positionNavbar = async () => {
     const nav = document.getElementById('navbar');
     const btn = document.getElementById('navBtn');
     if (nav && btn) {
         if (nav.style.right !== '0px') {
+            nav.style.transition = 'right 300ms ease-in';
             nav.style.right = '0';
-            btn.style.right = '400px';
+            btn.style.right = '90vw';
         } else {
-            nav.style.right = '-400px';
+            nav.style.right = '-90vw';
             btn.style.right = '0';
+            await sleep(300);
+            nav.style.transition = '';
         }
     } else {
         console.log('Navbar not found...');
