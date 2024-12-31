@@ -1,0 +1,19 @@
+@use '@styles/variables' as *;
+
+.home {
+
+    .content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        
+        span.h1-span {
+            padding-right: 25px;
+        }
+
+        img {
+            all: unset;
+        }
+    }
+}
