@@ -5,7 +5,7 @@ function Home() {
         <section className="home">
             <div className="content">
                 <h1>
-                    <span className='h1-span'>Olá!</span><img src="public/greeting.png" alt="Greetings Emoji" />
+                    <span className='h1-span'>Olá!</span><img src="/greeting.png" alt="Greetings Emoji" />
                     <br />Me chamo Adriano
                 </h1>
                 <div className="job">

@@ -29,7 +29,7 @@ const positionNavbar = async () => {
 
 function Navbar() {
     const [isSidebar, setIsSidebar] = useState(false);
-    const smBreakpoint = getCssVariable('--sm-breakpoint');
+    const smBreakpoint : number | string = getCssVariable('--sm-breakpoint');
 
     useEffect(() => {
         const handleResize = () => {
