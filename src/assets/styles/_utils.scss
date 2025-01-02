@@ -1,9 +1,0 @@
-@use '@styles/variables' as *;
-
-@function weight ($weight-name) {
-    @return map-get($map: $font-weights, $key: $weight-name);
-}
-
-@function size ($font-name) {
-    @return map-get($map: $font-sizes, $key: $font-name);
-}

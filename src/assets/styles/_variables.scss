@@ -1,3 +1,15 @@
+@function weight ($weight-name) {
+    @return map-get($map: $font-weights, $key: $weight-name);
+}
+
+@function size ($font-name) {
+    @return map-get($map: $font-sizes, $key: $font-name);
+}
+
+@function font-scale($step) {
+    @return $base-font-size * pow($scale-factor, $step);
+}
+
 // $primary: hsla(211, 53%, 11%, 1);
 // $secondary: hsla(219, 37%, 17%, 1);
 // $color3: hsla(212, 29%, 36%, 1);
@@ -19,10 +31,12 @@ $color4: #BC4B51;
 $color5: #FF220C;
 $color6: #FFB900;
 
-$font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 $base-spacing: 16px;
 $gap: 16px;
 $gap-big: $gap * 2;
+
+// Fonts
+$font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 $font-weights: (
     regular: 400,
     medium: 500,
@@ -30,11 +44,16 @@ $font-weights: (
     bolder: 800,
     extra-bold: 900,
 );
+$base-font-size: 16px;
+$scale-factor: 1.2;
 $font-sizes: (
-    regular: 16px,
-    medium: 24px,
-    large: 36px,
+    smaller: floor(font-scale(-2)),
+    small: floor(font-scale(-1)),
+    regular: $base-font-size,
+    medium: floor(font-scale(2)),
+    large: floor(font-scale(3)),
 );
+@debug $font-sizes;
 
 $border-radius-btn: 8px;
 
@@ -50,6 +69,7 @@ $ba-gradient: linear-gradient(
 
 :root {
     font-family: $font-family;
+    font-size: size(regular);
     background-color: $primary;
     color: $secondary;
 
