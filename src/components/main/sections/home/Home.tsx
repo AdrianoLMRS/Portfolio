@@ -1,6 +1,7 @@
 import './index.scss'
 
 function Home() {
+    const job : string = 'Desenvolvedor Full-Stack'
     return(
         <section className="home">
             <div className="content">
@@ -9,10 +10,13 @@ function Home() {
                     <br />Me chamo Adriano
                 </h1>
                 <div className="job">
-                    <h2>
+                    <h2 className='cursor-container'>
+                        <p className="type-cursor typewriter-animation">
                         <span className='html-tag'>&#60;/</span>
-                        Desenvolvedor Full-Stack
+                        {job}
                         <span className='html-tag'>&gt;</span>
+                        </p>
+                        <div className="cursor"></div>
                     </h2>
                     <p className='quotes-p'>
                         <q>

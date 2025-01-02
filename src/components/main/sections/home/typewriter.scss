@@ -1,0 +1,47 @@
+/* Cursor */
+.type-cursor{
+    position: relative;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/* Animation */
+.typewriter-animation {
+    animation: 
+        typewriter 5s steps(50) 1s 1 normal both, 
+}
+
+.cursor::after {
+    content: '|';
+    position: absolute;
+    margin-left: var(--_font-size, 1rem);
+    overflow: visible !important;
+    animation: blink 1s step-end infinite;
+}
+
+.blinking-cursor {
+    animation:
+        1s blink step-end infinite;
+}
+
+@keyframes typewriter {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    from, to {
+        color: transparent;
+    }
+    50% {
+        color: var(--_color, snow);
+    }
+}
+
+.cursor-container {
+    display: flex;
+    width: min-content;
+    flex-direction: row;
+    text-align: center;
+    margin: 0 auto;
+}

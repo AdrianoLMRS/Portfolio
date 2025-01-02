@@ -1,4 +1,6 @@
 @use '@styles/variables' as *;
+@use '@styles/animations' as *;
+@forward './typewriter.scss';
 
 .home {
     min-height: 100vh;
@@ -14,12 +16,32 @@
         flex-direction: column;
         row-gap: $gap;
         
+        
+
+        .job {
+            display: flex;
+            flex-direction: column;
+            row-gap: $gap;
+
+            h2 p {
+                white-space: nowrap !important;
+            }
+        }
+        
         span.h1-span {
             padding-right: 25px;
+        }
+
+        .html-tag {
+            animation: color-change 5s infinite; // Aplicando a animação
         }
 
         img {
             all: unset;
         }
     }
+}
+
+.quotes {
+    font-style: italic;
 }

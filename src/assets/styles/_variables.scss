@@ -6,6 +6,15 @@
     @return map-get($map: $font-sizes, $key: $font-name);
 }
 
+@function responsive($value, $factor) {
+    // $factor validation (vw, vh or %)
+    // @if not (unit($factor) == 'vw' or unit($factor) == 'vh' or unit($factor) == '%') {
+    //   @error "the $factor param: #{$factor} isn't valid. Use 'vw', 'vh' or '%' instead.";
+    // }
+    @return calc($value + $factor);
+}
+  
+
 @function font-scale($step) {
     @return $base-font-size * pow($scale-factor, $step);
 }
@@ -45,12 +54,16 @@ $font-weights: (
     extra-bold: 900,
 );
 $base-font-size: 16px;
-$scale-factor: 1.2;
+$scale-factor: 1.5;
 $font-sizes: (
     smaller: floor(font-scale(-2)),
+    smaller-small: floor(font-scale(-1.5)),
     small: floor(font-scale(-1)),
+    small-regular: floor(font-scale(-0.5)),
     regular: $base-font-size,
+    regular-medium: floor(font-scale(1.5)),
     medium: floor(font-scale(2)),
+    medium-large: floor(font-scale(2.5)),
     large: floor(font-scale(3)),
 );
 @debug $font-sizes;
