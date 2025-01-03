@@ -32,7 +32,7 @@ export function navItems(...items: NavItem[]) {
     <ul className="nav-ul">
       {items.map((item, index) => (
         <li className="nav-li" key={index}>
-          <a href={item.href} className="nav-item" data-content={item.name.toLocaleLowerCase()} >{item.name}</a>
+          <a href={`${item.href}`} className="nav-item" data-content={item.name.toLocaleLowerCase()} >{item.name}</a>
         </li>
       ))}
     </ul>

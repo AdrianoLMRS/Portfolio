@@ -49,9 +49,9 @@ function Navbar() {
         <header>
             <nav className={isSidebar ? 'sidebar' : 'navbar'} id='navbar'>
                 {navItems(
-                    { name: 'Home', href: '/' },
-                    { name: 'About', href: '/about' },
-                    { name: 'Projects', href: '/projects' },
+                    { name: 'Home', href: '/#home' },
+                    { name: 'About', href: '/#about' },
+                    { name: 'Projects', href: '/#projects' },
                     { name: 'Terminal', href: '/terminal' }
                 )}
             </nav>

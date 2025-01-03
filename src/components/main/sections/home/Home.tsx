@@ -23,7 +23,7 @@ function Home() {
     }, []);
 
     return(
-        <section className="home">
+        <section id='home' className="home">
             <div className="content">
                 <h1>
                     <span className='h1-span'>Olá!</span><img src="/greeting.png" alt="Greetings Emoji" />
