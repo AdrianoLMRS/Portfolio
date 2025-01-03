@@ -1,5 +1,5 @@
 // NavItem type
-type NavItem = { name: string; href: string };
+type NavItem = { name: string; href: string; dataContent: string; };
 
 // Create & exports component
 /**
@@ -27,12 +27,12 @@ type NavItem = { name: string; href: string };
  * }
  * ```
  */
-export function navItems(...items: NavItem[]) {
+export function navItems(...items: NavItem[]) : JSX.Element {
   return (
     <ul className="nav-ul">
       {items.map((item, index) => (
         <li className="nav-li" key={index}>
-          <a href={`${item.href}`} className="nav-item" data-content={item.name.toLocaleLowerCase()} >{item.name}</a>
+          <a href={`${item.href}`} className="nav-item" data-content={item.dataContent.toLocaleLowerCase()} >{item.name}</a>
         </li>
       ))}
     </ul>

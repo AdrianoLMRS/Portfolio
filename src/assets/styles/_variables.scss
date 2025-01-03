@@ -26,6 +26,7 @@
 // $color5: hsla(75, 6%, 87%, 1);
 
 // Common breakpoints for responsiveness
+$breakpoint-sx: 480px;  // small
 $breakpoint-sm: 602px;  // small
 $breakpoint-md: 768px;  // medium
 $breakpoint-lg: 992px;  // large
@@ -80,12 +81,15 @@ $ba-gradient: linear-gradient(
   $ba-light
 );
 
+$max-z-index: 100;
+
 :root {
     font-family: $font-family;
     font-size: size(regular);
     background-color: $primary;
     color: $secondary;
 
+    --sx-breakpoint: #{$breakpoint-sx};
     --sm-breakpoint: #{$breakpoint-sm};
     --md-breakpoint: #{$breakpoint-md};
     --lg-breakpoint: #{$breakpoint-lg};

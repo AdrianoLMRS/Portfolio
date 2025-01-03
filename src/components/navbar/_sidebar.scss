@@ -42,7 +42,7 @@ nav.sidebar {
     filter: invert(1);
     transition: right 300ms ease-in;
     
-    @media (min-width: $breakpoint-sm) {
+    @media (min-width: $breakpoint-md) {
         display: none;
     }
 }

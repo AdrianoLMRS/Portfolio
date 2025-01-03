@@ -13,3 +13,6 @@ docker - container
 render - deploy
 CI/CD devops - github actions
 git - version control
+
+
+Iteractive section to change all .scss or .sass variables + maybe react variables and saves in cookies browser

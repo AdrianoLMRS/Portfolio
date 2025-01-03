@@ -29,11 +29,11 @@ const positionNavbar = async () => {
 
 function Navbar() {
     const [isSidebar, setIsSidebar] = useState(false);
-    const smBreakpoint : number | string = getCssVariable('--sm-breakpoint');
+    const mdBreakpoint : number | string = getCssVariable('--md-breakpoint');
 
     useEffect(() => {
         const handleResize = () => {
-            setIsSidebar(window.innerWidth <= smBreakpoint);
+            setIsSidebar(window.innerWidth <= mdBreakpoint);
         };
 
         window.addEventListener('resize', handleResize);
@@ -47,12 +47,12 @@ function Navbar() {
 
     return (
         <header>
-            <nav className={isSidebar ? 'sidebar' : 'navbar'} id='navbar'>
+            <nav className={isSidebar ? 'sidebar navigation' : 'navbar navigation'} id='navbar'>
                 {navItems(
-                    { name: 'Home', href: '/#home' },
-                    { name: 'About', href: '/#about' },
-                    { name: 'Projects', href: '/#projects' },
-                    { name: 'Terminal', href: '/terminal' }
+                    { name: 'Home', href: '/#home', dataContent: 'home' },
+                    { name: 'Sobre mim', href: '/#about', dataContent: 'about' },
+                    { name: 'Projetos', href: '/#projects', dataContent: 'projects' },
+                    { name: 'Terminal', href: '/terminal', dataContent: 'terminal' }
                 )}
             </nav>
             <button onClick={positionNavbar} type="button" className="nav-btn" id="navBtn"></button>
