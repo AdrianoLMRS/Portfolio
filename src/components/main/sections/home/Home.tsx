@@ -1,7 +1,27 @@
+import { useEffect, useRef } from 'react';
 import './index.scss'
 
 function Home() {
     const job : string = 'Desenvolvedor Full-Stack'
+    const cursorRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        // Handle end of cursor animation.
+        const cursor = cursorRef.current;
+
+        const handleAnimationEnd = () => {
+            if (cursor) {
+                cursor.style.display = 'none';
+            }
+        };
+
+        cursor?.addEventListener('animationend', handleAnimationEnd);
+
+        return () => {
+            cursor?.removeEventListener('animationend', handleAnimationEnd);
+        };
+    }, []);
+
     return(
         <section className="home">
             <div className="content">
@@ -16,7 +36,7 @@ function Home() {
                         {job}
                         <span className='html-tag'>&gt;</span>
                         </p>
-                        <div className="cursor"></div>
+                        <div ref={cursorRef} className="cursor"></div>
                     </h2>
                     <p className='quotes-p'>
                         <q>

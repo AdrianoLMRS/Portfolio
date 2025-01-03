@@ -1,0 +1,3 @@
+@function fallback($variable, $fallback) {
+    @return if(variable-exists($variable) and $variable != null, $variable, $fallback);
+}  

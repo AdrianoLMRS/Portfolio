@@ -14,14 +14,16 @@
 .cursor::after {
     content: '|';
     position: absolute;
-    margin-left: var(--_font-size, 1rem);
+    // margin-left: var(--_font-size, 0.1rem);
     overflow: visible !important;
-    animation: blink 1s step-end infinite;
+    animation: blink 1s step-end;
+    animation-iteration-count: var(--_iteration, 8);
 }
 
 .blinking-cursor {
     animation:
         1s blink step-end infinite;
+
 }
 
 @keyframes typewriter {
