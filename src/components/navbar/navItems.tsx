@@ -13,9 +13,10 @@ type NavItem = { name: string; href: string; dataContent: string; };
  * import { navItems } from './navItems';
  *
  * const myNavItems = [
- *   { name: 'Home', href: '/' },
- *   { name: 'About', href: '/about' },
- *   { name: 'Contact', href: '/contact' },
+ *    { name: 'Home', href: '/#home', dataContent: 'home' },
+ *    { name: 'Sobre mim', href: '/#about', dataContent: 'about' },
+ *    { name: 'Projetos', href: '/#projects', dataContent: 'projects' },
+ *    { name: 'Terminal', href: '/terminal', dataContent: 'terminal' }
  * ];
  *
  * function App() {
@@ -28,13 +29,13 @@ type NavItem = { name: string; href: string; dataContent: string; };
  * ```
  */
 export function navItems(...items: NavItem[]) : JSX.Element {
-  return (
-    <ul className="nav-ul">
-      {items.map((item, index) => (
-        <li className="nav-li" key={index}>
-          <a href={`${item.href}`} className="nav-item" data-content={item.dataContent.toLocaleLowerCase()} >{item.name}</a>
-        </li>
-      ))}
-    </ul>
-  );
+    return (
+        <ul className="nav-ul">
+            {items.map((item, index) => (
+                <li className="nav-li" key={index}>
+                    <a href={`${item.href}`} className="nav-item" data-content={item.dataContent.toLocaleLowerCase()} >{item.name}</a>
+                </li>
+            ))}
+        </ul>
+    );
 }
