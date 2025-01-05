@@ -1,8 +1,10 @@
 import { useEffect, useRef } from 'react';
-import './index.scss'
+import './index.scss';
+import links from '@utils/links';
 
 function Home() {
-    const job : string = 'Desenvolvedor Full-Stack'
+    const job : string = 'Desenvolvedor Full-Stack' 
+
     const cursorRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
@@ -29,6 +31,7 @@ function Home() {
                     <span className='h1-span'>Olá!</span><img src="/greeting.png" alt="Greetings Emoji" />
                     <br />Me chamo Adriano
                 </h1>
+
                 <div className="job">
                     <h2 className='cursor-container'>
                         <p className="type-cursor typewriter-animation">
@@ -44,6 +47,20 @@ function Home() {
                         completas e escaláveis.
                         </q>
                     </p>
+                </div>
+
+                <div className="social">
+                    <div className="links">
+                        <a href="" target="_blank" rel="noopener noreferrer">
+                            <img src="/github.png" alt="GitHub Logo" />
+                        </a>
+                        <a href="" target="_blank" rel="noopener noreferrer">
+                            <img src="/linkedin.png" alt="LinkedIn Logo" />
+                        </a>
+                        <a href="" target="_blank" rel="noopener noreferrer">
+                            <img src="/mail.png" alt="Email Logo" />
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
