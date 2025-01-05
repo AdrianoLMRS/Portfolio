@@ -1,6 +1,5 @@
 interface Links {
     [key: string]: string | { [key: string]: string };
-    courses: { [key: string]: string };
 }
 
 const links = {
@@ -21,6 +20,13 @@ const links = {
         mongodb: 'https://www.youtube.com/watch?v=c2M-rlkkT5o&pp=ygUUYnJvIGNvZGUgZnVsbCBjb3Vyc2U%3D',
         mysql: 'https://www.youtube.com/watch?v=5OdVJbNCSso',
     },
+    navbar: {
+        root: '/',
+        home: '/#home',
+        about: '/#about',
+        projects: '/#projects',
+        terminal: '/terminal',
+    }
 } satisfies Links;   
 
 export default links;

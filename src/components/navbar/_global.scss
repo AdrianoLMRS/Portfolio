@@ -5,74 +5,75 @@
 nav.navigation {
     overflow: hidden;
     z-index: $max-z-index;
-}
 
-.nav-item {
-    font-weight: weight(bolder);
-    text-decoration: none;
-    letter-spacing: 1px;
-    display: inline-block;
-    position: relative;
-    color: $primary;
-    transition: all 300ms ease;
-    white-space: nowrap;
-    &:hover {
-        transform: scale(1.05);
-        color: $color6;
-
-        &::after {
-            opacity: 1 !important;
-            transform: rotate(15deg);
-            bottom: -5px;
-            right: -20px;
-        }
-    }
-
-    &::after {
-        content: "";
-        position: absolute;
-        z-index: -1;
-        width: var(--_scale);
-        height: var(--_scale);
-        right: 0;
-        bottom: 0;
-        opacity: 0;
-        background-size: cover;
+    .nav-item {
+        font-weight: weight(bolder);
+        text-decoration: none;
+        letter-spacing: 1px;
+        display: inline-block;
+        position: relative;
+        color: $primary;
         transition: all 300ms ease;
-
-        --_scale: 16px;
-    }
-
-    &[data-content="terminal"] {
-        &::after {
-            animation: terminal-bg 1s infinite;
-            @media (max-width: $breakpoint-sm) {
-                filter: invert(1);
+        white-space: nowrap;
+        cursor: pointer;
+        &:hover {
+            transform: scale(1.05);
+            color: $color6;
+    
+            &::after {
+                opacity: 1 !important;
+                transform: rotate(15deg);
+                bottom: -5px;
+                right: -20px;
             }
         }
-    }
-
-    &[data-content="projects"] {
+    
         &::after {
-            background-image: url(@public/gear.svg);
-            animation: spin 1.5s linear infinite;
-            @media (max-width: $breakpoint-sm) {
-                filter: invert(1);
-            }        
+            content: "";
+            position: absolute;
+            z-index: -1;
+            width: var(--_scale);
+            height: var(--_scale);
+            right: 0;
+            bottom: 0;
+            opacity: 0;
+            background-size: cover;
+            transition: all 300ms ease;
+    
+            --_scale: 16px;
         }
-    }
-
-    &[data-content="about"] {
-        &::after {
-            content: '👋';
-            // background-image: url(@public/greeting.png);
-            animation: wave-animation 2.5s linear infinite;
+    
+        &[data-content="terminal"] {
+            &::after {
+                animation: terminal-bg 1s infinite;
+                @media (max-width: $breakpoint-sm) {
+                    filter: invert(1);
+                }
+            }
         }
-    }
-
-    &[data-content="home"] {
-        &::after {
-            background-image: url(@public/home.svg);
+    
+        &[data-content="projects"] {
+            &::after {
+                background-image: url(@public/gear.svg);
+                animation: spin 1.5s linear infinite;
+                @media (max-width: $breakpoint-sm) {
+                    filter: invert(1);
+                }        
+            }
+        }
+    
+        &[data-content="about"] {
+            &::after {
+                content: '👋';
+                // background-image: url(@public/greeting.png);
+                animation: wave-animation 2.5s linear infinite;
+            }
+        }
+    
+        &[data-content="home"] {
+            &::after {
+                background-image: url(@public/home.svg);
+            }
         }
     }
 }

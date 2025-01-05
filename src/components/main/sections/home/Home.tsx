@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import './index.scss';
+import navItems from '@utils/navItems';
 import links from '@utils/links';
 
 function Home() {
@@ -50,17 +51,12 @@ function Home() {
                 </div>
 
                 <div className="social">
-                    <div className="links">
-                        <a href="" target="_blank" rel="noopener noreferrer">
-                            <img src="/github.png" alt="GitHub Logo" />
-                        </a>
-                        <a href="" target="_blank" rel="noopener noreferrer">
-                            <img src="/linkedin.png" alt="LinkedIn Logo" />
-                        </a>
-                        <a href="" target="_blank" rel="noopener noreferrer">
-                            <img src="/mail.png" alt="Email Logo" />
-                        </a>
-                    </div>
+                    {/* {navItems(
+                        { name: 'Github', href: links.github, dataContent: 'github' },
+                        { name: 'Linkedin', href: links.linkedin, dataContent: 'linkedin' },
+                        { name: 'Download CV', href: links.cvRaw, dataContent: 'cvRaw' },
+                        { name: 'CV (demo)', href: links.cv, dataContent: 'cv' }
+                    )} */}
                 </div>
             </div>
         </section>
