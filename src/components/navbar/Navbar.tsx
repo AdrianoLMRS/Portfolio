@@ -26,7 +26,7 @@ function Navbar() {
     return (
         <header>
             <nav className={isSidebar ? 'sidebar navigation' : 'navbar navigation'} id="navbar">
-            {navItems(...navData)}
+                {   navItems ( ...navData )    }
             </nav>
             <button onClick={positionNavbar} type="button" className="nav-btn" id="navBtn"></button>
             <hr className="header-hr" />

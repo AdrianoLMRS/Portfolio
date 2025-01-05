@@ -1,5 +1,6 @@
+import React from "react"; // ! Require React
+
 // NavItem type
-import React from "react";
 type NavItem = { 
     htmlTag: keyof JSX.IntrinsicElements; 
     name?: string; 
@@ -37,13 +38,15 @@ export function navItems(...items: NavItem[]): JSX.Element {
         <ul className="nav-ul">
             {items.map((item, index) => {
                 const HtmlTag = item.htmlTag; // Dynamic tag (e.g., 'a')
-                const { name, href, dataContent, ...rest } = item; // Extract additional props
+                const { htmlTag, name, ...rest } = item; // Remove `htmlTag` from rest properties
 
                 return (
                     <li className="nav-li" key={index}>
-                        {React.createElement(HtmlTag, {
-                            ...rest // Spread any other props
-                        }, name)}
+                        {React.createElement(
+                            HtmlTag,
+                            { ...rest }, // Spread only valid attributes
+                            name // Render content inside the element
+                        )}
                     </li>
                 );
             })}

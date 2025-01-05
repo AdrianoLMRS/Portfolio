@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
-import './index.scss';
 import navItems from '@utils/navItems';
-import links from '@utils/links';
+import socialData from './_socialData';
+import './index.scss';
 
 function Home() {
     const job : string = 'Desenvolvedor Full-Stack' 
@@ -51,12 +51,7 @@ function Home() {
                 </div>
 
                 <div className="social">
-                    {/* {navItems(
-                        { name: 'Github', href: links.github, dataContent: 'github' },
-                        { name: 'Linkedin', href: links.linkedin, dataContent: 'linkedin' },
-                        { name: 'Download CV', href: links.cvRaw, dataContent: 'cvRaw' },
-                        { name: 'CV (demo)', href: links.cv, dataContent: 'cv' }
-                    )} */}
+                    {   navItems ( ...socialData )    }
                 </div>
             </div>
         </section>

@@ -15,8 +15,12 @@
         display: flex;
         flex-direction: column;
         row-gap: $gap;
-        
-        
+
+        h1 {
+            img {
+                all: unset;
+            }
+        }        
 
         .job {
             display: flex;
@@ -33,11 +37,29 @@
         }
 
         .html-tag {
-            animation: color-change 5s infinite; // Aplicando a animação
+            animation: color-change 5s infinite;
         }
 
-        img {
-            all: unset;
+        .social {
+            padding-top: 10px;
+
+            img.icon {
+                cursor: pointer;
+                filter: invert(1);
+
+                &:hover {
+                    transform: scale(1.2);
+                }
+
+                transition: transform 300ms ease;
+            }
+
+            ul {
+                list-style-type: none;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+            }
         }
     }
 }
