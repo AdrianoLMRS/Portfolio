@@ -1,15 +1,31 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import navItems from '@utils/navItems';
 import socialData from './_socialData';
 import links from '@utils/links';
+import { getCssVariable } from '@utils/misc';
 import './index.scss';
 
 function Home() {
-    const job : string = 'Desenvolvedor Full-Stack' 
+    const classSmall : string = ' small-div';
+    const defaultJobTitle : string = 'Desenvolvedor Full-Stack'
+    const callbackJobTitle : string = 'Full-Stack'
 
-    const cursorRef = useRef<HTMLDivElement>(null);
+    const sxBreakpoint: number = getCssVariable('--sx-breakpoint');
+
+    const [isSmall, setIsSmall] = useState(false);
+    const [jobTitle, setJobTitle] = useState(defaultJobTitle)
+
+    const cursorRef : React.RefObject<HTMLDivElement> = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
+        const handleResize = () => {
+            setIsSmall(window.innerWidth <= sxBreakpoint);
+        };
+
+        window.addEventListener('resize', handleResize);
+
+        handleResize();
+
         // Handle end of cursor animation.
         const cursor = cursorRef.current;
 
@@ -23,14 +39,19 @@ function Home() {
 
         return () => {
             cursor?.removeEventListener('animationend', handleAnimationEnd);
+            window.removeEventListener('resize', handleResize);
         };
     }, []);
 
+    useEffect(() => {
+        setJobTitle(isSmall ? callbackJobTitle : defaultJobTitle);
+    }, [isSmall]);    
+
     return(
         <section id='home' className="home">
-            <div className="content">
+            <div className={`content${isSmall ? classSmall : ''}`}>
                 <h1>
-                    <span className='h1-span'>Olá!</span><img src="/greeting.png" alt="Greetings Emoji" />
+                    <span className='h1-span'>Olá!</span><img loading='lazy' src="/greeting.png" alt="Greetings Emoji" />
                     <br />Me chamo Adriano
                 </h1>
 
@@ -38,7 +59,7 @@ function Home() {
                     <h2 className='cursor-container'>
                         <p className="type-cursor typewriter-animation">
                         <span className='html-tag'>&#60;/</span>
-                        {job}
+                        {jobTitle}
                         <span className='html-tag'>&gt;</span>
                         </p>
                         <div ref={cursorRef} className="cursor"></div>

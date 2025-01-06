@@ -11,11 +11,19 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-
         text-align: center;
         display: flex;
         flex-direction: column;
         row-gap: $gap;
+
+        @media (max-width: $breakpoint-sx) {
+            max-width: 200px;
+            row-gap: $gap-big;
+            .cv {
+                flex-direction: column;
+                row-gap: 20px;
+            }
+        };
 
         h1 {
             img {
@@ -61,7 +69,7 @@
                 flex-wrap: wrap;
                 flex-direction: row;
                 justify-content: center;
-                column-gap: $gap-big;
+                gap: $gap-big;
             }
         }
 
