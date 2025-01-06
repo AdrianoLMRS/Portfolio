@@ -35,6 +35,7 @@ $breakpoint-xl: 1200px; // extra-large
 $transition-default: all 300ms ease-in;
 
 $primary: #191919;
+$primary-light: lighten($color: $primary, $amount: 2%);
 $secondary: rgb(255, 250, 250); // #fffafa
 $color3: #6E8894;
 $color4: #BC4B51;

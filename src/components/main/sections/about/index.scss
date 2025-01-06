@@ -1,3 +1,16 @@
+@use '@styles/variables' as *;
+
 .about {
-    color: yellow !important;
+    background-color: $primary-light;
+
+    .content {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    .about-text {
+        padding: 10px;
+    }
+
 }
