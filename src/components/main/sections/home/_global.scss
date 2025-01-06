@@ -1,0 +1,61 @@
+@use '@styles/variables' as *;
+
+@mixin button-shared-styles($bg-color, $border-color) {
+    background-color: $bg-color;
+    border: 1px solid $border-color;
+    color: $border-color;
+    border-radius: $border-radius-btn;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: map-get($font-weights, bold);
+    line-height: 20px;
+    margin: 0;
+    outline: none;
+    padding: 13px 23px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    touch-action: manipulation;
+    transition: 
+      box-shadow 0.2s ease, 
+      -ms-transform 0.1s ease, 
+      -webkit-transform 0.1s ease, 
+      transform 0.1s ease, 
+      background-color 0.3s ease, 
+      border-color 0.3s ease,
+      color 0.3s ease;
+    user-select: none;
+    -webkit-user-select: none;
+    width: auto;
+  }
+  
+  @mixin button-focus($box-shadow-color, $extra-color) {
+    &:focus-visible {
+      box-shadow: #{$box-shadow-color} 0 0 0 2px, rgba($extra-color, 0.8) 0 0 0 4px;
+      transition: box-shadow 0.2s;
+    }
+  }
+  
+  @mixin button-active {
+    &:active {
+      transform: scale(0.96);
+    }
+  }
+  
+  .button1 {
+    @include button-shared-styles($secondary, $primary);
+    @include button-focus($secondary, rgba(255, 255, 255, 0.8));
+    @include button-active;
+  }
+  
+  .button2 {
+    @include button-shared-styles($primary, $secondary);
+    @include button-focus($primary, rgba(0, 0, 0, 0.8));
+    @include button-active;
+  
+    &:hover {
+      @include button-shared-styles($secondary, $primary);
+    }
+  }
+  

@@ -1,6 +1,7 @@
 @use '@styles/variables' as *;
 @use '@styles/animations' as *;
-@forward './typewriter.scss';
+@forward 'typewriter';
+@forward 'global';
 
 .home {
     min-height: 100vh;
@@ -57,8 +58,21 @@
             ul {
                 list-style-type: none;
                 display: flex;
+                flex-wrap: wrap;
                 flex-direction: row;
-                justify-content: space-around;
+                justify-content: center;
+                column-gap: $gap-big;
+            }
+        }
+
+        .cv {
+            display: inline-flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+
+            .button1:hover {
+                color: $color3 !important;
             }
         }
     }

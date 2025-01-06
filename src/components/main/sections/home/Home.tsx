@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 import navItems from '@utils/navItems';
 import socialData from './_socialData';
+import links from '@utils/links';
 import './index.scss';
 
 function Home() {
@@ -52,6 +53,11 @@ function Home() {
 
                 <div className="social">
                     {   navItems ( ...socialData )    }
+                </div>
+
+                <div className="cv">
+                    <a className='button2' href={links.cv} target="_blank" rel="noopener noreferrer">See CV</a>
+                    <a className='button1' href={links.cvRaw} target="_blank" rel="noopener noreferrer">Download CV</a>
                 </div>
             </div>
         </section>
