@@ -1,6 +1,4 @@
-interface Links {
-    [key: string]: string | { [key: string]: string };
-}
+import { stringObject as Links } from "./types.ts";
 
 const links = {
     github: 'https://github.com/AdrianoLMRS/',
@@ -12,6 +10,8 @@ const links = {
     portfolioGithub: 'https://github.com/AdrianoLMRS/Portfolio?tab=readme-ov-file#readme',
     pousadaTao: 'https://pousada-tao.onrender.com/',
     pousadaTaoGithub: 'https://github.com/AdrianoLMRS/Pousada-TAO?tab=readme-ov-file#readme',
+    imageToAscii: 'https://github.com/AdrianoLMRS/Image-to-ASCII/releases/v1.0.br',
+    imageToAsciiGithub: 'https://github.com/AdrianoLMRS/Image-to-ASCII',
     cv: 'https://github.com/AdrianoLMRS/AdrianoLMRS/blob/main/curriculo.pdf',
     get cvRaw() {   return this.cv + '?raw=True'; /* Returns cvRaw in github */  },
     courses: {

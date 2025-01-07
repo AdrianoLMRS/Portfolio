@@ -79,14 +79,12 @@
             flex-wrap: wrap;
             justify-content: space-evenly;
 
-            .button1:hover {
-                color: $color3 !important;
-            }
+
         }
     }
 
     q {
-        font-size: size(regularRoot) !important;
+        font-size: size(regularRoot);
     }
 }
 

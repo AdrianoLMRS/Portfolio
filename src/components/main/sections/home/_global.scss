@@ -28,34 +28,38 @@
     user-select: none;
     -webkit-user-select: none;
     width: auto;
-  }
+}
   
-  @mixin button-focus($box-shadow-color, $extra-color) {
+@mixin button-focus($box-shadow-color, $extra-color) {
     &:focus-visible {
-      box-shadow: #{$box-shadow-color} 0 0 0 2px, rgba($extra-color, 0.8) 0 0 0 4px;
-      transition: box-shadow 0.2s;
+        box-shadow: #{$box-shadow-color} 0 0 0 2px, rgba($extra-color, 0.8) 0 0 0 4px;
+        transition: box-shadow 0.2s;
     }
-  }
+}
   
-  @mixin button-active {
+@mixin button-active {
     &:active {
-      transform: scale(0.96);
+        transform: scale(0.96);
     }
-  }
+}
   
-  .button1 {
+.button1 {
     @include button-shared-styles($secondary, $primary);
     @include button-focus($secondary, rgba(255, 255, 255, 0.8));
     @include button-active;
-  }
+}
   
-  .button2 {
+.button2 {
     @include button-shared-styles($primary, $secondary);
     @include button-focus($primary, rgba(0, 0, 0, 0.8));
     @include button-active;
-  
+
     &:hover {
-      @include button-shared-styles($secondary, $primary);
+        @include button-shared-styles($secondary, $primary);
     }
-  }
+}
+
+.button1:hover {
+    color: $color3;
+}
   
