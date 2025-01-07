@@ -62,7 +62,8 @@ $font-sizes: (
     smaller-small: floor(font-scale(-1.5)),
     small: floor(font-scale(-1)),
     small-regular: floor(font-scale(-0.5)),
-    regular: $base-font-size,
+    regularRoot: 1rem,
+    regular: floor(font-scale(1)),
     regular-medium: floor(font-scale(1.5)),
     medium: floor(font-scale(2)),
     medium-large: floor(font-scale(2.5)),
@@ -86,7 +87,7 @@ $max-z-index: 100;
 
 :root {
     font-family: $font-family;
-    font-size: size(regular);
+    font-size: size(regular1);
     background-color: $primary;
     color: $secondary;
 

@@ -1,0 +1,5 @@
+@use '@styles/variables' as *;
+
+main > section:not(.home) h2 {
+    font-size: size(medium);
+}

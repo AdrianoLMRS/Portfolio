@@ -4,13 +4,29 @@
     background-color: $primary-light;
 
     .content {
+        min-height: 65vh;
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
+        justify-content: space-between;
     }
 
-    .about-text {
-        padding: 10px;
+    .about-container, .stack-container {
+        width: 50%;
+        min-width: 600px;
+        padding: 20px;
+    }
+
+    .about-container {
+        .about-text {
+            line-height: 2;
+            font-size: size(regular-medium);
+            padding-top: 50px;
+        }
+    }
+
+    .stack-container {
+        text-align: end;
     }
 
 }
