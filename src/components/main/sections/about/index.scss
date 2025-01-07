@@ -1,20 +1,23 @@
 @use '@styles/variables' as *;
+@use 'variables' as local;
 
 .about {
     background-color: $primary-light;
 
     .content {
-        min-height: 65vh;
-        display: flex;
+        // min-height: 65vh;
+        width: 100%;
+        display: inline-flex;
         flex-wrap: wrap;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-around;
     }
 
     .about-container, .stack-container {
-        width: 50%;
-        min-width: 600px;
-        padding: 20px;
+        // width: 50%;
+        // min-width: 400px;
+        max-width: 50vw;
+        padding: 50px;
     }
 
     .about-container {
@@ -26,7 +29,39 @@
     }
 
     .stack-container {
-        text-align: end;
-    }
+        min-width: 600px;
+
+        h2 {
+            text-align: center;
+        }
+      
+        .img-container {
+            margin-top: 25px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, auto); 
+            gap: $gap-big;
+
+            .item {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                row-gap: $gap;
+
+                .item-title {
+                    font-size: size(regular);
+                }
+            
+                img {
+                    max-width: local.$img-size;
+                    max-height: local.$img-size;
+                }
+
+            }
+
+        }
+      }
+      
 
 }
