@@ -16,3 +16,4 @@ git - version control
 
 
 Iteractive section to change all .scss or .sass variables + maybe react variables and saves in cookies browser
+make nav-items a component itself

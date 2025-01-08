@@ -6,14 +6,16 @@
 
     .content {
         width: 100%;
-        display: inline-flex;
+        display: flex;
         flex-wrap: wrap;
         flex-direction: row;
         justify-content: space-around;
     }
 
     .about-container, .stack-container {
-        max-width: 50vw;
+        @media (min-width: 1233px) {
+            max-width: 50vw;
+        }
         padding: $padding;
     }
 

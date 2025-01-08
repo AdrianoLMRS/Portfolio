@@ -11,7 +11,7 @@
     $_border-color-light: lighten($_border-color, 5%);
     $_border: 1px solid $_border-color;
     border: $_border;
-    cursor: pointer;
+    // cursor: pointer;
 
     transition: box-shadow 250ms, border 250ms;
 

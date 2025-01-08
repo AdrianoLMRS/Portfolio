@@ -5,10 +5,11 @@ interface CardProps {
     alt: string;
     title: string;
     text: string;
+    github: string;
     onClick?: () => void;
 }
 
-const Card: React.FC<CardProps> = ({ title, text, images, alt, onClick }) => {
+const Card: React.FC<CardProps> = ({ title, text, images, alt, onClick, github }) => {
     return (
         <div className="card">
             <div className="card-content">
@@ -16,7 +17,7 @@ const Card: React.FC<CardProps> = ({ title, text, images, alt, onClick }) => {
                     <ImageSlider images={images} alt={alt} />
                 <p className="card-text">{text}</p>
                 <div className='actions'>
-                    <button className='button2' onClick={onClick} type="button">Github</button>
+                    <a className='button2' href={github} target='_blank' >Github</a>
                     <button className='button1' onClick={onClick} type="button">Ver mais</button>
                 </div>
             </div>

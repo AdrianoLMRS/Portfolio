@@ -1,13 +1,19 @@
+import { useState } from 'react';
 import Card from './projectCard'
 import './index.scss';
 import projectsInfo from "@utils/projectsInfo";
 import links from "@utils/links";
+import { default as Modal } from '@components/modals/pousadaTao'
 
 function Home() {
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const openModal = () => setIsModalOpen(true);
+    const closeModal = () => setIsModalOpen(false);
+
     const pousadaTao = projectsInfo.pousadaTao;
     const imageToAscii = projectsInfo.imageToAscii;
-
-    const placeholderScale : string = '600x600' // in px
+    const wip = async () => {  window.alert('WIP - Em desenvolvimento')  }
 
     return(
         <section className="projects" id="projects">
@@ -20,21 +26,25 @@ function Home() {
                             `https://iili.io/2gmKIp4.webp`,
                             `https://iili.io/2gmKzvf.webp`,
                         ]} 
-                        alt={pousadaTao.title + ' Demo image'}
+                        alt={pousadaTao.title}
                         title={pousadaTao.title}
                         text={pousadaTao.main}
-                        onClick={() => {window.open(links.pousadaTao)}}
+                        github={links.portfolioGithub}
+                        onClick={openModal}
                     />
                     <Card 
                         images={[
                             `https://iili.io/2gmA7na.webp`, 
                             `https://iili.io/2gmAa6v.webp`,
                         ]} 
-                        alt={imageToAscii.title + ' Demo image'}
+                        alt={imageToAscii.title}
                         title={imageToAscii.title}
                         text={imageToAscii.main}
-                        onClick={() => {window.open(links.imageToAscii)}}
+                        github={links.imageToAscii}
+                        onClick={openModal}
                     />
+                    {/* Passando os parâmetros corretos para o Modal */}
+                    <Modal isModalOpen={isModalOpen} closeModal={closeModal} />
                 </div>
             </div>
         </section>
