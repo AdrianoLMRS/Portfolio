@@ -1,0 +1,38 @@
+@use '@styles/variables' as *;
+@use 'variables' as local;
+
+.card {
+    border-radius: $border-radius-card;
+    background-color: $primary-light;
+    width: local.$card-width;
+
+    box-shadow: local.$box-shadow;
+    $_border-color: local.$border-color;
+    $_border-color-light: lighten($_border-color, 5%);
+    $_border: 1px solid $_border-color;
+    border: $_border;
+    cursor: pointer;
+
+    transition: box-shadow 250ms, border 250ms;
+
+    &:hover {
+        box-shadow: local.$box-shadow-hover;
+        $_border: 1px solid $_border-color-light;
+        border: $_border;
+    }
+
+    .card-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: $gap-big;
+        padding: local.$padding;
+
+        .card-title {
+            text-align: center;
+        }
+    }
+}
+
+// Inspired by https://codepen.io/aaroniker/pen/yLEPJXj

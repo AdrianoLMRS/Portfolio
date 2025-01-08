@@ -4,20 +4,30 @@ import projectsInfo from "@utils/projectsInfo";
 
 function Home() {
     const pousadaTao = projectsInfo.pousadaTao;
-    // const imageToAscii = projectsInfo.imageToAscii;
+    const imageToAscii = projectsInfo.imageToAscii;
+
+    const placeholderScale : string = '300x300' // in px
 
     return(
-        <div className="projects" id="projects">
-            <h2>Projects</h2>
-            <div className="projects-container">
-            <Card 
-                src='' 
-                alt="Pousada Tao Demo image"
-                title={pousadaTao.title}
-                text={pousadaTao.main}
-            />
+        <section className="projects" id="projects">
+            <div className="content">
+                <h2>Projects</h2>
+                <div className="projects-container">
+                    <Card 
+                        src={`https://placehold.jp/${placeholderScale}.png`} 
+                        alt={pousadaTao.title + ' Demo image'}
+                        title={pousadaTao.title}
+                        text={pousadaTao.main}
+                    />
+                    <Card 
+                        src={`https://placehold.jp/${placeholderScale}.png`} 
+                        alt={imageToAscii.title + ' Demo image'}
+                        title={imageToAscii.title}
+                        text={imageToAscii.main}
+                    />
+                </div>
             </div>
-        </div>
+        </section>
     );
 }
 

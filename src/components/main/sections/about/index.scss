@@ -5,7 +5,6 @@
     background-color: $primary-light;
 
     .content {
-        // min-height: 65vh;
         width: 100%;
         display: inline-flex;
         flex-wrap: wrap;
@@ -14,17 +13,15 @@
     }
 
     .about-container, .stack-container {
-        // width: 50%;
-        // min-width: 400px;
         max-width: 50vw;
-        padding: 50px;
+        padding: $padding;
     }
 
     .about-container {
         .about-text {
             line-height: 2;
             font-size: size(regular-medium);
-            padding-top: 50px;
+            padding-top: $padding;
         }
     }
 

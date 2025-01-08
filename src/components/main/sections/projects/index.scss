@@ -1,3 +1,21 @@
+@use '@styles/variables' as *;
+@use 'variables' as local;
+@forward './card.scss';
+@forward '@styles/index.scss';
+
 .projects {
 
+    .content {
+        padding: $padding;
+    }
+
+    .projects-container {
+        padding-top: $padding;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
 }
+

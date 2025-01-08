@@ -30,7 +30,7 @@ const projectsInfo = {
     },
     imageToAscii: {
         title: 'Image to ASCII',
-        main: 'Image-to-ASCII é um script feito em C que converte imagens em caracteres ASCII',
+        main: 'Image to ASCII é um script feito em C que converte imagens em caracteres ASCII',
         links: {
             demo: links.imageToAscii,
             github: links.imageToAsciiGithub,

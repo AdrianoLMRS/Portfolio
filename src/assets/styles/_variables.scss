@@ -72,6 +72,7 @@ $font-sizes: (
 @debug $font-sizes;
 
 $border-radius-btn: 8px;
+$border-radius-card: 15px;
 
 $ba-light: lighten($primary, 10%);
 $ba-deg: -45deg;
@@ -84,6 +85,8 @@ $ba-gradient: linear-gradient(
 );
 
 $max-z-index: 100;
+
+$padding: 50px;
 
 :root {
     font-family: $font-family;

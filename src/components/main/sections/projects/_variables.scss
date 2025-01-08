@@ -1,0 +1,23 @@
+$padding: 25px;
+$card-width: 400px;
+$border-color: #2b2b2d;
+
+$card-box-shadow-1: rgba(0, 0, 0, 0.05);
+$card-box-shadow-1-y: 3px;
+$card-box-shadow-1-blur: 6px;
+$card-box-shadow-2: rgba(0, 0, 0, 0.1);
+$card-box-shadow-2-y: 8px;
+$card-box-shadow-2-blur: 15px;
+
+$card-hover-box-shadow-1: rgba(0, 0, 0, 0.04);
+$card-hover-box-shadow-1-y: 5px;
+$card-hover-box-shadow-1-blur: 10px;
+$card-hover-box-shadow-2: rgba(0, 0, 0, 0.3);
+$card-hover-box-shadow-2-y: 15px;
+$card-hover-box-shadow-2-blur: 25px;
+
+$card-border-color: rgba(24, 24, 27, 0.08);
+$card-hover-border-color: rgba(24, 24, 27, 0.15);
+
+$box-shadow: 0px $card-box-shadow-1-y $card-box-shadow-1-blur $card-box-shadow-1, 0px $card-box-shadow-2-y $card-box-shadow-2-blur $card-box-shadow-2, 0 0 0 1px $card-border-color;
+$box-shadow-hover: 0px 3px 6px $card-hover-box-shadow-1, 0px $card-hover-box-shadow-2-y $card-hover-box-shadow-2-blur $card-hover-box-shadow-2, 0 0 0 1px $card-hover-border-color;
