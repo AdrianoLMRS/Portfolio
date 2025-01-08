@@ -15,7 +15,10 @@ const Card: React.FC<CardProps> = ({ title, text, images, alt, onClick }) => {
                 <h3 className="card-title">{title}</h3>
                     <ImageSlider images={images} alt={alt} />
                 <p className="card-text">{text}</p>
-                <button className='button1' onClick={onClick} type="button">Ver mais</button>
+                <div className='actions'>
+                    <button className='button2' onClick={onClick} type="button">Github</button>
+                    <button className='button1' onClick={onClick} type="button">Ver mais</button>
+                </div>
             </div>
         </div>
     );

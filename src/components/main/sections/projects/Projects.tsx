@@ -7,18 +7,18 @@ function Home() {
     const pousadaTao = projectsInfo.pousadaTao;
     const imageToAscii = projectsInfo.imageToAscii;
 
-    const placeholderScale : string = '300x300' // in px
+    const placeholderScale : string = '600x600' // in px
 
     return(
         <section className="projects" id="projects">
             <div className="content">
-                <h2>Projects</h2>
+                <h2>Projetos</h2>
                 <div className="projects-container">
                     <Card 
                         images={[
-                            `https://placehold.jp/${placeholderScale}.png?text=image+1`, 
-                            `https://placehold.jp/${placeholderScale}.png?text=image+2`,
-                            `https://placehold.jp/${placeholderScale}.png?text=image+3`,
+                            `https://iili.io/2gmKuTl.webp`, 
+                            `https://iili.io/2gmKIp4.webp`,
+                            `https://iili.io/2gmKzvf.webp`,
                         ]} 
                         alt={pousadaTao.title + ' Demo image'}
                         title={pousadaTao.title}
@@ -27,9 +27,8 @@ function Home() {
                     />
                     <Card 
                         images={[
-                            `https://placehold.jp/${placeholderScale}.png?text=image+1`, 
-                            `https://placehold.jp/${placeholderScale}.png?text=image+2`,
-                            `https://placehold.jp/${placeholderScale}.png?text=image+3`,
+                            `https://iili.io/2gmA7na.webp`, 
+                            `https://iili.io/2gmAa6v.webp`,
                         ]} 
                         alt={imageToAscii.title + ' Demo image'}
                         title={imageToAscii.title}

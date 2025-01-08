@@ -25,7 +25,7 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ images, alt, onClick }) => {
     return (
         <div className="image-slider">
             <button onClick={prevImage} className="slider-btn prev-btn">
-                &#8592;
+                &#60;
             </button>
             <img
                 src={images[currentIndex]}
@@ -33,7 +33,7 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ images, alt, onClick }) => {
                 onClick={onClick}
             />
             <button onClick={nextImage} className="slider-btn next-btn">
-                &#8594;
+                &#62;
             </button>
         </div>
     );
