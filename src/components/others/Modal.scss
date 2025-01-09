@@ -1,4 +1,4 @@
-/* Modal.scss */
+@use '@styles/variables' as *;
 
 .modal-overlay {
     position: fixed;
@@ -14,8 +14,8 @@
   }
   
   .modal-content {
-    background: white;
-    padding: 20px;
+    background: $secondary;
+    padding: $padding;
     border-radius: 8px;
     width: 300px;
     position: relative;

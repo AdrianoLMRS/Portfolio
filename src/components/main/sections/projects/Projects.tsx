@@ -13,7 +13,7 @@ function Home() {
 
     const pousadaTao = projectsInfo.pousadaTao;
     const imageToAscii = projectsInfo.imageToAscii;
-    const wip = async () => {  window.alert('WIP - Em desenvolvimento')  }
+    // const wip = async () => {  window.alert('WIP - Em desenvolvimento')  }
 
     return(
         <section className="projects" id="projects">
