@@ -1,13 +1,12 @@
 @use '@styles/variables' as *;
-@use 'variables' as local;
+@use '@components/main/sections/projects/variables' as pVar; // Projeects variables
 
 .card {
     border-radius: $border-radius-card;
     background-color: $primary-light;
-    width: local.$card-width;
 
-    box-shadow: local.$box-shadow;
-    $_border-color: local.$border-color;
+    box-shadow: pVar.$box-shadow;
+    $_border-color: pVar.$border-color;
     $_border-color-light: lighten($_border-color, 5%);
     $_border: 1px solid $_border-color;
     border: $_border;
@@ -16,7 +15,7 @@
     transition: box-shadow 250ms, border 250ms;
 
     &:hover {
-        box-shadow: local.$box-shadow-hover;
+        box-shadow: pVar.$box-shadow-hover;
         $_border: 1px solid $_border-color-light;
         border: $_border;
     }
@@ -27,7 +26,7 @@
         justify-content: center;
         align-items: center;
         row-gap: $gap-big;
-        padding: local.$padding;
+        padding: pVar.$padding;
 
         .card-title {
             text-align: center;
@@ -38,6 +37,16 @@
             display: inline-flex;
             justify-content: space-between;
         }
+    }
+
+    // *WIDTH DIFF*
+    .projects & {
+        width: pVar.$card-width;
+    }
+
+    .tech & {
+        white-space: nowrap;
+        width: 120px;
     }
 }
 

@@ -1,5 +1,5 @@
 @use '@styles/variables' as *;
-@forward './card.scss';
+@forward '@styles/card.scss';
 @forward '@styles/index.scss';
 
 .projects {
