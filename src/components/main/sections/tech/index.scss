@@ -1,0 +1,21 @@
+.tech {
+    .content {
+        padding: 50px;
+
+        h2 {
+            padding-bottom: 50px;
+            text-align: center;
+        }
+
+        .stack {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 30px;
+
+            > * {
+                flex-grow: 1;
+            }
+        }
+    }
+}
