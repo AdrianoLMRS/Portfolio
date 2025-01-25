@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef, useCallback, useMemo } from 'react';
 import navItems from '@utils/navItems';
 import socialData from './_socialData';
-import links from '@utils/links';
+import links from '@data/links';
 import { getCssVariable } from '@utils/misc';
 import './index.scss';
 

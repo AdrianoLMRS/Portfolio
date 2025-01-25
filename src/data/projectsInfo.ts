@@ -1,5 +1,5 @@
 import { stringObject } from "./types.js";
-import links from "./links.js";
+import links from "../data/links.js";
 
 const projectsInfo = {
     pousadaTao: {

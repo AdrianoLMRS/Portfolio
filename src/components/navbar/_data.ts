@@ -1,4 +1,4 @@
-import links from '@utils/links';
+import links from '@data/links';
 
 type functionType = { htmlTag: keyof JSX.IntrinsicElements; name: string; href: string; 'data-content': string; className: string; };
 type navDataType = Array< functionType > ; // Need Array (ts is strange...)

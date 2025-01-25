@@ -1,4 +1,7 @@
-import links from '@utils/links';
+import links from '@data/links';
+import imgSrc from '@data/imgSrc';
+
+const src = imgSrc.social;
 
 type params = {
     htmlTag: any; 
@@ -13,35 +16,34 @@ type socialDataType = Array< params > ; // Need Array (ts is strange...)
 const html = 'img' // <img> tag in HTML
 const l = links; // Links shortcut
 const c : string = 'icon'; // Class name
-const size : string = '48'; // Size of icons in pixels
 
 const socialData: socialDataType = [
     {
         htmlTag: html,
         onClick: () => window.open(l.github, '_blank'),
         className: c,
-        src: `https://img.icons8.com/ios-glyphs/${size}/github.png`,
+        src: src.github,
         alt: 'GitHub Icon',
     },
     {
         htmlTag: html,
         onClick: () => window.open(l.linkedin, '_blank'),
         className: c,
-        src: `https://img.icons8.com/ios-glyphs/${size}/linkedin.png`,
+        src: src.linkedin,
         alt: 'LinkedIn Icon',
     },
     {
         htmlTag: html,
         onClick: () => window.open(l.email, '_blank'),
         className: c,
-        src: `https://img.icons8.com/ios-filled/${size}/new-post.png`,
+        src: src.mail,
         alt: 'Email Icon',
     },
     {
         htmlTag: html,
         onClick: () => window.open(l.phone, '_blank'),
         className: c,
-        src: `https://img.icons8.com/ios-filled/${size}/phone.png`,
+        src: src.phone,
         alt: 'Phone Icon',
     },
 ];

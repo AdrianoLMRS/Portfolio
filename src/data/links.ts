@@ -1,4 +1,4 @@
-import { stringObject as Links } from "./types.ts";
+import { stringObject as Links } from "./types.js";
 
 const links = {
     github: 'https://github.com/AdrianoLMRS/',

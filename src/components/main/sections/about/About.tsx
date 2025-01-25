@@ -1,10 +1,12 @@
 import { default as AboutParagraph } from '@components/others/aboutMe';
 import Item from './itemImg'
+import { default as imgSrc } from '@data/imgSrc' // General imgs srcs
 // import TechSlider from '@components/others/techSlider';
 import './index.scss';
 
+const src = imgSrc.tech;
+
 function About() {
-    const itemImgSize : string = '96'; // In pixels 96px
 
     return (
         <section id='about' className="about">
@@ -17,27 +19,27 @@ function About() {
                     <h2>Stack atual</h2>
                     <div className="img-container">
                         <Item 
-                            src={`https://img.icons8.com/office/${itemImgSize}/react.png`} 
+                            src={src.react}
                             alt="ReactJS Icon"
                             title="ReactJS"
                         />
                         <Item 
-                            src={`https://img.icons8.com/external-tal-revivo-color-tal-revivo/${itemImgSize}/external-typescript-an-open-source-programming-language-developed-and-maintained-by-microsoft-logo-color-tal-revivo.png`} 
+                            src={src.typescript}
                             alt="Typescript Icon" 
                             title="Typescript" 
                         />
                         <Item 
-                            src={`https://img.icons8.com/color/${itemImgSize}/nodejs.png`} 
+                            src={src.nodejs}
                             alt="NodeJS Icon" 
                             title="NodeJS" 
                         />
                         <Item 
-                            src={`https://img.icons8.com/color/${itemImgSize}/mongo-db.png`} 
+                            src={src.mongodb}
                             alt="MongoDB Icon" 
                             title="MongoDB" 
                         />
                         <Item 
-                            src={`https://img.icons8.com/color/${itemImgSize}/sass.png`} 
+                            src={src.sass}
                             alt="Sass Icon" 
                             title="Sass" 
                         />

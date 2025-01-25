@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import Card from './projectCard'
 import './index.scss';
-import projectsInfo from "@utils/projectsInfo";
-import links from "@utils/links";
+import projectsInfo from "@data/projectsInfo";
+import links from "@data/links";
 import { default as Modal } from '@components/modals/pousadaTao'
 
 function Home() {
