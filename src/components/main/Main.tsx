@@ -1,12 +1,13 @@
 import './index.scss'
-import { Home, About, Projects } from "./sections/index";
+import { Home, About, Projects, Tech } from "./sections/index";
 
 function Main() {
     return(
         <main>
-            <Home/>
-            <About/>
-            <Projects/>
+            <Home />
+            <About />
+            <Projects />
+            <Tech />
         </main>
     );
 }

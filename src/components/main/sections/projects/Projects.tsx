@@ -43,7 +43,6 @@ function Home() {
                         github={links.imageToAscii}
                         onClick={openModal}
                     />
-                    {/* Passando os parâmetros corretos para o Modal */}
                     <Modal isModalOpen={isModalOpen} closeModal={closeModal} />
                 </div>
             </div>
