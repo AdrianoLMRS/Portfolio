@@ -9,7 +9,7 @@ export default function Card({ imgSrc, techName }: CardProps) {
   return (
     <div className="card">
       <div className="card-content">
-        <img src={imgSrc || `https://placehold.jp/${scale}.png`} alt={techName} />
+        <img loading="lazy" src={imgSrc || `https://placehold.jp/${scale}.png`} alt={techName} />
         <p className="card-text">{techName}</p>
       </div>
     </div>

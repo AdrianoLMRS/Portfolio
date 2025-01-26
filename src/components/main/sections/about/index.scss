@@ -1,5 +1,6 @@
 @use '@styles/variables' as *;
 @use 'variables' as local;
+@forward '@styles/highlight';
 
 .about {
     background-color: $primary-light;
@@ -23,6 +24,10 @@
         .about-text {
             line-height: 2;
             font-size: size(regular-medium);
+            font-weight: normal;
+            mark {
+                color: $secondary !important;
+            }
             padding-top: $padding;
         }
     }

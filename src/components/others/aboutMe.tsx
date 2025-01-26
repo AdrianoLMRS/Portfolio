@@ -1,7 +1,14 @@
+import links from "@data/links";
 export default function AboutMe() {
     return (
         <p className="about-text">
-            Sou Adriano, desenvolvedor Full-Stack com experiência em JavaScript, TypeScript, React, Node.js, Express, MongoDB e MySQL. Tenho paixão tanto pelo frontend quanto pelo backend, e também trabalho com Docker e implantação de aplicativos em plataformas como GitHub Pages e Render. Sempre em busca de novos desafios, estou aberto a oportunidades para crescer e contribuir no mundo da tecnologia. Confira meus projetos no GitHub e entre em contato!
+            Sou Adriano, <mark>desenvolvedor Full-Stack</mark> com experiência em desenvolver <mark>aplicações web</mark>.
+              Tenho paixão tanto pelo <mark>frontend</mark> quanto pelo <mark>backend</mark>,
+               e também trabalho com <mark>Docker</mark> e implantação de aplicativos em plataformas como <mark>GitHub Pages</mark> e <mark>Render</mark>.
+                Sempre em busca de novos desafios, estou <mark>aberto</mark> a <mark>oportunidades</mark> 
+                para <mark>crescer</mark> e <mark>contribuir</mark> no mundo da tecnologia. 
+                 Confira meus projetos no <mark>GitHub</mark> e entre em&nbsp; 
+                  <strong><a href={links.email} target="_blank" rel="noopener noreferrer">contato</a></strong>!
         </p>
     );
 }

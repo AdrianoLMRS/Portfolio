@@ -78,8 +78,8 @@ function Home() {
                         </h2>
                         <p className='quotes-p'>
                             <q>
-                                Como Desenvolvedor Full-Stack, trago experiência prática em construir aplicações
-                                completas e escaláveis.
+                                Como <strong>Desenvolvedor Full-Stack</strong>, trago experiência prática em construir aplicações
+                                <strong> completas e escaláveis.</strong>
                             </q>
                         </p>
                     </div>

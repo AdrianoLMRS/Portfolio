@@ -1,4 +1,5 @@
 import { default as AboutParagraph } from '@components/others/aboutMe';
+import ScrollAnimation from '@components/others/ScrollAnimation';
 import Item from './itemImg'
 import { default as imgSrc } from '@data/imgSrc' // General imgs srcs
 // import TechSlider from '@components/others/techSlider';
@@ -13,7 +14,9 @@ function About() {
             <div className="content">
                 <div className="about-container">
                     <h2>Sobre mim</h2>
-                    <AboutParagraph />
+                    <ScrollAnimation className='highlight-animation' threshold={0.2}>
+                        <AboutParagraph />
+                    </ScrollAnimation>
                 </div>
                 <div className="stack-container">
                     <h2>Stack atual</h2>
