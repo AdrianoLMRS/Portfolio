@@ -1,4 +1,5 @@
 import { useEffect, useState, useRef, useCallback, useMemo } from 'react';
+import ScrollAnimation from '@components/others/ScrollAnimation';
 import navItems from '@utils/navItems';
 import socialData from './_socialData';
 import links from '@data/links';
@@ -58,40 +59,42 @@ function Home() {
     }, [isSmall]);
 
     return (
-        <section id='home' className="home">
-            <div className={contentClass}>
-                <h1>
-                    <span className='h1-span'>Olá!</span><img src="/greeting.png" alt="Greetings Emoji" loading="lazy" />
-                    <br />Me chamo Adriano
-                </h1>
+        <ScrollAnimation>
+            <section id='home' className="home">
+                <div className={contentClass}>
+                    <h1>
+                        <span className='h1-span'>Olá!</span><img src="/greeting.png" alt="Greetings Emoji" loading="lazy" />
+                        <br />Me chamo Adriano
+                    </h1>
 
-                <div className="job">
-                    <h2 className='cursor-container'>
-                        <p className="type-cursor typewriter-animation">
-                            <span className='html-tag'>&#60;/</span>
-                            {jobTitle}
-                            <span className='html-tag'>&gt;</span>
+                    <div className="job">
+                        <h2 className='cursor-container'>
+                            <p className="type-cursor typewriter-animation">
+                                <span className='html-tag'>&#60;/</span>
+                                {jobTitle}
+                                <span className='html-tag'>&gt;</span>
+                            </p>
+                            <div ref={cursorRef} className="cursor"></div>
+                        </h2>
+                        <p className='quotes-p'>
+                            <q>
+                                Como Desenvolvedor Full-Stack, trago experiência prática em construir aplicações
+                                completas e escaláveis.
+                            </q>
                         </p>
-                        <div ref={cursorRef} className="cursor"></div>
-                    </h2>
-                    <p className='quotes-p'>
-                        <q>
-                            Como Desenvolvedor Full-Stack, trago experiência prática em construir aplicações
-                            completas e escaláveis.
-                        </q>
-                    </p>
-                </div>
+                    </div>
 
-                <div className="social">
-                    {navItems(...socialData)}
-                </div>
+                    <div className="social">
+                        {navItems(...socialData)}
+                    </div>
 
-                <div className="cv">
-                    <a className='button2' href={links.cv} target="_blank" rel="noopener noreferrer">See CV</a>
-                    <a className='button1' href={links.cvRaw} target="_blank" rel="noopener noreferrer">Download CV</a>
+                    <div className="cv">
+                        <a className='button2' href={links.cv} target="_blank" rel="noopener noreferrer">See CV</a>
+                        <a className='button1' href={links.cvRaw} target="_blank" rel="noopener noreferrer">Download CV</a>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </ScrollAnimation>
     );
 }
 
