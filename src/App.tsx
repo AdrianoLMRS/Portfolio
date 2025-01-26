@@ -1,3 +1,5 @@
+// TODO: Make social icons components with <a> tag
+
 import '@styles/App.scss'
 // import Header from '@components/header/Header';
 import Navbar from '@components/navbar/Navbar';

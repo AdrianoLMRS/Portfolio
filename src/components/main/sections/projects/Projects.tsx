@@ -8,12 +8,12 @@ import { default as Modal } from '@components/modals/pousadaTao'
 function Home() {
     const [isModalOpen, setIsModalOpen] = useState(false);
 
-    const openModal = () => setIsModalOpen(true);
-    const closeModal = () => setIsModalOpen(false);
+    // const openModal = () => setIsModalOpen(true);
+    // const closeModal = () => setIsModalOpen(false);
 
     const pousadaTao = projectsInfo.pousadaTao;
     const imageToAscii = projectsInfo.imageToAscii;
-    // const wip = async () => {  window.alert('WIP - Em desenvolvimento')  }
+    const wip = async () => {  window.alert('WIP - Em desenvolvimento\n\nWIP - Work in progress')  }
 
     return(
         <section className="projects" id="projects">
@@ -30,7 +30,7 @@ function Home() {
                         title={pousadaTao.title}
                         text={pousadaTao.main}
                         github={links.portfolioGithub}
-                        onClick={openModal}
+                        onClick={wip}
                     />
                     <Card 
                         images={[
@@ -41,9 +41,9 @@ function Home() {
                         title={imageToAscii.title}
                         text={imageToAscii.main}
                         github={links.imageToAscii}
-                        onClick={openModal}
+                        onClick={wip}
                     />
-                    <Modal isModalOpen={isModalOpen} closeModal={closeModal} />
+                    {/* <Modal isModalOpen={isModalOpen} closeModal={closeModal} /> */}
                 </div>
             </div>
         </section>

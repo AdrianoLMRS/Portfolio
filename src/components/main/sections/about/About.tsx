@@ -44,7 +44,7 @@ function About() {
                             title="Sass" 
                         />
                         <div className="item">
-                            <button onClick={() => {alert('WIP - Em desenvolvimento')}} className='button1' type="button">Stack completa</button>
+                            <a href="/#tech" className="button1">Stack completa</a>
                         </div>
                     </div>
                 </div>
