@@ -1,3 +1,6 @@
-footer p {
-    color: red !important;
+@use '@styles/variables' as *;
+
+.footer {
+    background-color: $primary-light;
+
 }

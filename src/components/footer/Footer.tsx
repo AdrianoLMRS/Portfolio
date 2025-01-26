@@ -2,7 +2,7 @@ import './index.scss'
 
 function Footer() {
     return(
-        <footer>
+        <footer className='footer'>
             <p>FOOTER - WIP</p>
         </footer>
     );
