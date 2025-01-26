@@ -1,12 +1,12 @@
-import { useState } from 'react';
+// import { useState } from 'react';
 import Card from './projectCard'
 import './index.scss';
 import projectsInfo from "@data/projectsInfo";
 import links from "@data/links";
-import { default as Modal } from '@components/modals/pousadaTao'
+// import { default as Modal } from '@components/modals/pousadaTao'
 
 function Home() {
-    const [isModalOpen, setIsModalOpen] = useState(false);
+    // const [isModalOpen, setIsModalOpen] = useState(false);
 
     // const openModal = () => setIsModalOpen(true);
     // const closeModal = () => setIsModalOpen(false);

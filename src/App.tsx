@@ -1,4 +1,5 @@
 // TODO: Make social icons components with <a> tag
+// TODO: Make scroll animations
 
 import '@styles/App.scss'
 // import Header from '@components/header/Header';
