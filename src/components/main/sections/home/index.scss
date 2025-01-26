@@ -49,29 +49,7 @@
             animation: color-change 5s infinite;
         }
 
-        .social {
-            padding-top: 10px;
 
-            img.icon {
-                cursor: pointer;
-                filter: invert(1);
-
-                &:hover {
-                    transform: scale(1.2);
-                }
-
-                transition: transform 300ms ease;
-            }
-
-            ul {
-                list-style-type: none;
-                display: flex;
-                flex-wrap: wrap;
-                flex-direction: row;
-                justify-content: center;
-                gap: $gap-big;
-            }
-        }
 
         .cv {
             display: inline-flex;
@@ -90,4 +68,28 @@
 
 .quotes {
     font-style: italic;
+}
+
+.social {
+    padding-top: 10px;
+
+    img.icon {
+        cursor: pointer;
+        filter: invert(1);
+
+        &:hover {
+            transform: scale(1.2);
+        }
+
+        transition: transform 300ms ease;
+    }
+
+    ul {
+        list-style-type: none;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        gap: $gap-big;
+    }
 }

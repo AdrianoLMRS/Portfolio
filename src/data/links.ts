@@ -4,7 +4,7 @@ const links = {
     github: 'https://github.com/AdrianoLMRS/',
     githubRepos: 'https://github.com/AdrianoLMRS?tab=repositories',
     linkedin: 'https://www.linkedin.com/in/adrianoweb/',
-    email: 'https://is.gd/adrianoemail',
+    email: 'mailto:adriano.lmrs1@gmail.com?subject=Ol%C3%A1!',
     phone: 'https://criarmeulink.com.br/u/1734858351',
     portfolio: 'https://portfolio-adriano-p4dj.onrender.com/',
     portfolioGithub: 'https://github.com/AdrianoLMRS/Portfolio?tab=readme-ov-file#readme',
