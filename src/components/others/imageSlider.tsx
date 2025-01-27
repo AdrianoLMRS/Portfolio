@@ -22,8 +22,23 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ images, alt, onClick }) => {
         );
     };
 
+    // Preload images onHover for better performance
+    const preloadImage = (index: number) => {
+        const image = new Image();
+        image.src = images[index];
+    };
+
+    const handleHover = () => {
+        const nextIndex = (currentIndex + 1) % images.length;
+        const prevIndex = currentIndex === 0 ? images.length - 1 : currentIndex - 1;
+
+        // Preload next and previous images
+        preloadImage(nextIndex);
+        preloadImage(prevIndex);
+    };
+
     return (
-        <div className="image-slider">
+        <div className="image-slider" onMouseEnter={handleHover}>
             <button onClick={prevImage} className="slider-btn prev-btn">
                 &#60;
             </button>
