@@ -30,12 +30,10 @@
   }
 }
 
-// Importa o mixin em qualquer arquivo SCSS que precise
 .scroll-fade {
   @include scroll-fade();
 }
 
-// Caso precise alterar a duração ou o easing:
 .custom-scroll-fade {
   @include scroll-fade(0.8s, ease-in-out);
 }

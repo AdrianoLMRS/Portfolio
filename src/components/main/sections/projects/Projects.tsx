@@ -3,6 +3,7 @@ import Card from './projectCard'
 import './index.scss';
 import projectsInfo from "@data/projectsInfo";
 import links from "@data/links";
+import ScrollAnimation from '@components/others/ScrollAnimation';
 // import { default as Modal } from '@components/modals/pousadaTao'
 
 function Home() {
@@ -19,32 +20,37 @@ function Home() {
         <section className="projects" id="projects">
             <div className="content">
                 <h2>Projetos</h2>
-                <div className="projects-container">
-                    <Card 
-                        images={[
-                            `https://iili.io/2gmKuTl.webp`, 
-                            `https://iili.io/2gmKIp4.webp`,
-                            `https://iili.io/2gmKzvf.webp`,
-                        ]} 
-                        alt={pousadaTao.title}
-                        title={pousadaTao.title}
-                        text={pousadaTao.main}
-                        github={links.portfolioGithub}
-                        onClick={wip}
-                    />
-                    <Card 
-                        images={[
-                            `https://iili.io/2LykzMv.webp`, 
-                            `https://iili.io/2LykxoJ.webp`,
-                            `https://iili.io/2gmA7na.webp`, 
-                            `https://iili.io/2gmAa6v.webp`,
-                        ]} 
-                        alt={imageToAscii.title}
-                        title={imageToAscii.title}
-                        text={imageToAscii.main}
-                        github={links.imageToAscii}
-                        onClick={wip}
-                    />
+                <div className="projects-container" >
+                    <ScrollAnimation className='project-animator' threshold={ 0.2 }>
+                        <Card 
+                            images={[
+                                `https://iili.io/2gmKuTl.webp`, 
+                                `https://iili.io/2gmKIp4.webp`,
+                                `https://iili.io/2gmKzvf.webp`,
+                            ]} 
+                            alt={pousadaTao.title}
+                            title={pousadaTao.title}
+                            text={pousadaTao.main}
+                            github={links.portfolioGithub}
+                            onClick={wip}
+                        />
+                    </ScrollAnimation>
+                    <ScrollAnimation className="project-animator" threshold={ 0.2 }>
+                        <Card 
+                            images={[
+                                `https://iili.io/2LykzMv.webp`, 
+                                `https://iili.io/2LykxoJ.webp`,
+                                `https://iili.io/2gmA7na.webp`, 
+                                `https://iili.io/2gmAa6v.webp`,
+                            ]} 
+                            alt={imageToAscii.title}
+                            title={imageToAscii.title}
+                            text={imageToAscii.main}
+                            github={links.imageToAscii}
+                            onClick={wip}
+                        />
+                    </ScrollAnimation>
+
                     {/* <Modal isModalOpen={isModalOpen} closeModal={closeModal} /> */}
                 </div>
             </div>

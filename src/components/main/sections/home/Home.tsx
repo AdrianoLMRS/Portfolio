@@ -59,7 +59,7 @@ function Home() {
     }, [isSmall]);
 
     return (
-        <ScrollAnimation>
+        <ScrollAnimation repeat={true}>
             <section id='home' className="home">
                 <div className={contentClass}>
                     <h1>
