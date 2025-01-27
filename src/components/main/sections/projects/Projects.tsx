@@ -34,6 +34,8 @@ function Home() {
                     />
                     <Card 
                         images={[
+                            `https://iili.io/2LykzMv.webp`, 
+                            `https://iili.io/2LykxoJ.webp`,
                             `https://iili.io/2gmA7na.webp`, 
                             `https://iili.io/2gmAa6v.webp`,
                         ]} 
