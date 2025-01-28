@@ -9,12 +9,12 @@ interface PousadaProps {
 }
 
 const Pousada: React.FC<PousadaProps> = ({ isModalOpen, closeModal }) => {
-return (
-    <Modal isOpen={isModalOpen} onClose={closeModal}>
-        <h4>Modal</h4>
-        <p>Hello world!</p>
-    </Modal>
-);
+    return (
+        <Modal isOpen={isModalOpen} onClose={closeModal}>
+            <h4>Modal</h4>
+            <p>Hello world!</p>
+        </Modal>
+    );
 };
 
 export default Pousada;

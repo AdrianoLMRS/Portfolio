@@ -2,7 +2,7 @@ import navItems from '@utils/navItems';
 import socialData from '@components/main/sections/home/_socialData';
 import links from '@data/links';
 
-import './index.scss'
+import './index.scss';
 
 function Footer() {
     return(

@@ -1,7 +1,7 @@
 import { default as AboutParagraph } from '@components/others/aboutMe';
 import ScrollAnimation from '@components/others/ScrollAnimation';
-import Item from './itemImg'
-import { default as imgSrc } from '@data/imgSrc' // General imgs srcs
+import Item from './itemImg';
+import { default as imgSrc } from '@data/imgSrc'; // General imgs srcs
 // import TechSlider from '@components/others/techSlider';
 import './index.scss';
 

@@ -4,7 +4,7 @@ import imgSrc from '@data/imgSrc';
 const src = imgSrc.social;
 
 type params = {
-    htmlTag: any; 
+    htmlTag: 'img' | 'a' | 'div'; 
     onClick: () => void; 
     className: string;
     src: string; 
@@ -13,7 +13,7 @@ type params = {
 
 type socialDataType = Array< params > ; // Need Array (ts is strange...)
 
-const html = 'img' // <img> tag in HTML
+const html = 'img'; // <img> tag in HTML
 const l = links; // Links shortcut
 const c : string = 'icon'; // Class name
 

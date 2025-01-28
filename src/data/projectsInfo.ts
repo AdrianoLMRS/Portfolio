@@ -1,5 +1,5 @@
-import { stringObject } from "./types.js";
-import links from "../data/links.js";
+import { stringObject } from './types.js';
+import links from '../data/links.js';
 
 const projectsInfo = {
     pousadaTao: {
@@ -47,7 +47,7 @@ const projectsInfo = {
             compile: 'gcc, g++',
         },
     },
-} satisfies stringObject
+} satisfies stringObject;
 
 function makeAll(object: Record<string, string>): string {
     return Object.values(object)
@@ -55,10 +55,10 @@ function makeAll(object: Record<string, string>): string {
         .join('\n');
 }
 
-const pousadaTaoFeatures = projectsInfo.pousadaTao.features
-pousadaTaoFeatures.all = makeAll(pousadaTaoFeatures)
+const pousadaTaoFeatures = projectsInfo.pousadaTao.features;
+pousadaTaoFeatures.all = makeAll(pousadaTaoFeatures);
 
-const imageToAsciiFeatures = projectsInfo.imageToAscii.features
-imageToAsciiFeatures.all = makeAll(imageToAsciiFeatures)
+const imageToAsciiFeatures = projectsInfo.imageToAscii.features;
+imageToAsciiFeatures.all = makeAll(imageToAsciiFeatures);
 
-export default projectsInfo
+export default projectsInfo;

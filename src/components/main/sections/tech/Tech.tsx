@@ -1,8 +1,8 @@
-import Card from './card'
-import imgSrc from '@data/imgSrc'
+import Card from './card';
+import imgSrc from '@data/imgSrc';
 import './index.scss';
 
-const src = imgSrc.tech
+const src = imgSrc.tech;
 
 function Tech() {
 

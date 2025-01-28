@@ -1,7 +1,7 @@
 // TODO: Make social icons components with <a> tag
 // TODO: Make scroll animations
 
-import '@styles/App.scss'
+import '@styles/App.scss';
 // import Header from '@components/header/Header';
 import Navbar from '@components/navbar/Navbar';
 import Footer from '@components/footer/Footer';
@@ -14,13 +14,13 @@ declare global {
 }
 
 function App() {
-  return (
-    <>
-      <Navbar/>
-      <Main/>
-      <Footer/>
-    </>
-  );
+    return (
+        <>
+            <Navbar/>
+            <Main/>
+            <Footer/>
+        </>
+    );
 }
 
-export default App
+export default App;

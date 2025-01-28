@@ -1,5 +1,5 @@
-import './index.scss'
-import { Home, About, Projects, Tech } from "./sections/index";
+import './index.scss';
+import { Home, About, Projects, Tech } from './sections/index';
 
 function Main() {
     return(

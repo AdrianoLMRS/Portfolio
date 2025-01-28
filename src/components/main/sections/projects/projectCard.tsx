@@ -14,7 +14,7 @@ const Card: React.FC<CardProps> = ({ title, text, images, alt, onClick, github }
         <div className="card">
             <div className="card-content">
                 <h3 className="card-title">{title}</h3>
-                    <ImageSlider images={images} alt={alt} />
+                <ImageSlider images={images} alt={alt} />
                 <p className="card-text">{text}</p>
                 <div className='actions'>
                     <a className='button2' href={github} target='_blank' >Github</a>

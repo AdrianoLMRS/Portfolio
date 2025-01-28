@@ -1,4 +1,4 @@
-import { stringObject as imgSrcType } from "./types.js";
+import { stringObject as imgSrcType } from './types.js';
 
 const itemImgSize : string = String( 96 ); // In pixels 96px
 const linksImgSize : string = String( 48 ); // In pixels 48px

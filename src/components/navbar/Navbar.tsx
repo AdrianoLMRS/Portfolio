@@ -7,7 +7,7 @@ import './index.scss';
 
 function Navbar() {
     const [isSidebar, setIsSidebar] = useState(false);
-    const mdBreakpoint : number | string = getCssVariable('--md-breakpoint');
+    const mdBreakpoint : number = Number(getCssVariable('--md-breakpoint'));
 
     useEffect(() => {
         const handleResize = () => {
@@ -21,7 +21,7 @@ function Navbar() {
         return () => {
             window.removeEventListener('resize', handleResize);
         };
-    }, []);
+    }, [mdBreakpoint]);
 
     return (
         <header>

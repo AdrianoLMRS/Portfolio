@@ -1,4 +1,4 @@
-import links from "@data/links";
+import links from '@data/links';
 export default function AboutMe() {
     return (
         <p className="about-text">
@@ -8,7 +8,7 @@ export default function AboutMe() {
                 Sempre em busca de novos desafios, estou <mark>aberto</mark> a <mark>oportunidades</mark> 
                 para <mark>crescer</mark> e <mark>contribuir</mark> no mundo da tecnologia. 
                  Confira meus projetos no <mark>GitHub</mark> e entre em&nbsp; 
-                  <strong><a href={links.email} target="_blank" rel="noopener noreferrer">contato</a></strong>!
+            <strong><a href={links.email} target="_blank" rel="noopener noreferrer">contato</a></strong>!
         </p>
     );
 }

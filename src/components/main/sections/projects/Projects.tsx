@@ -1,8 +1,8 @@
 // import { useState } from 'react';
-import Card from './projectCard'
+import Card from './projectCard';
 import './index.scss';
-import projectsInfo from "@data/projectsInfo";
-import links from "@data/links";
+import projectsInfo from '@data/projectsInfo';
+import links from '@data/links';
 import ScrollAnimation from '@components/others/ScrollAnimation';
 // import { default as Modal } from '@components/modals/pousadaTao'
 
@@ -14,7 +14,7 @@ function Home() {
 
     const pousadaTao = projectsInfo.pousadaTao;
     const imageToAscii = projectsInfo.imageToAscii;
-    const wip = async () => {  window.alert('WIP - Em desenvolvimento\n\nWIP - Work in progress')  }
+    const wip = async () => {  window.alert('WIP - Em desenvolvimento\n\nWIP - Work in progress');  };
 
     return(
         <section className="projects" id="projects">
@@ -24,9 +24,9 @@ function Home() {
                     <ScrollAnimation className='project-animator' threshold={ 0.2 }>
                         <Card 
                             images={[
-                                `https://iili.io/2gmKuTl.webp`, 
-                                `https://iili.io/2gmKIp4.webp`,
-                                `https://iili.io/2gmKzvf.webp`,
+                                'https://iili.io/2gmKuTl.webp', 
+                                'https://iili.io/2gmKIp4.webp',
+                                'https://iili.io/2gmKzvf.webp',
                             ]} 
                             alt={pousadaTao.title}
                             title={pousadaTao.title}
@@ -38,10 +38,10 @@ function Home() {
                     <ScrollAnimation className="project-animator" threshold={ 0.2 }>
                         <Card 
                             images={[
-                                `https://iili.io/2LykzMv.webp`, 
-                                `https://iili.io/2LykxoJ.webp`,
-                                `https://iili.io/2gmA7na.webp`, 
-                                `https://iili.io/2gmAa6v.webp`,
+                                'https://iili.io/2LykzMv.webp', 
+                                'https://iili.io/2LykxoJ.webp',
+                                'https://iili.io/2gmA7na.webp', 
+                                'https://iili.io/2gmAa6v.webp',
                             ]} 
                             alt={imageToAscii.title}
                             title={imageToAscii.title}

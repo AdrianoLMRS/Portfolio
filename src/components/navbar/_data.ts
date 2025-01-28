@@ -3,7 +3,7 @@ import links from '@data/links';
 type functionType = { htmlTag: keyof JSX.IntrinsicElements; name: string; href: string; 'data-content': string; className: string; };
 type navDataType = Array< functionType > ; // Need Array (ts is strange...)
 
-const html = 'a' // </a> tag in HTML
+const html = 'a'; // </a> tag in HTML
 const l = links.navbar; // Links shortcut
 const c : string = 'nav-item'; // Class name
 

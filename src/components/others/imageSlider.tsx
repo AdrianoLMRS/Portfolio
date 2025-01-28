@@ -1,4 +1,4 @@
-import './imageSlider.scss'
+import './imageSlider.scss';
 
 // imageSlider.tsx
 import React, { useState } from 'react';

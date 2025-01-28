@@ -1,4 +1,4 @@
-import { sleep } from "@utils/misc";
+import { sleep } from '@utils/misc';
 
 export const positionNavbar = async (): Promise<void> => {
     try {

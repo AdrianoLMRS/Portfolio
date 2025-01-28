@@ -8,9 +8,9 @@ interface ModalProps {
 }
 
 const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
-  if (!isOpen) return null;  // Dont render modal
+    if (!isOpen) return null;  // Dont render modal
 
-  return (
+    return (
         <div className="modal-overlay" onClick={onClose}>
             <div className="modal">
                 <div className="modal-content" onClick={(e) => e.stopPropagation()}>
@@ -19,7 +19,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
                 </div>
             </div>
         </div>
-  );
+    );
 };
 
 export default Modal;
