@@ -9,6 +9,7 @@ function Footer() {
         <footer className='footer'>
             <p>Desenvolvido por <a href={links.github} target='_blank'>Adriano Rossi</a><br>
             </br>&copy; 2025</p>
+            <hr />
             <div className="social">
                 {navItems(...socialData)}
             </div>

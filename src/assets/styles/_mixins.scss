@@ -18,7 +18,11 @@
     align-items: center;
 }
 
-
+@mixin widget($r: undefined, $b: undefined) {
+  position: fixed;
+  right: $r;
+  bottom: $b;
+}
 
 @mixin scroll-fade($duration: 0.6s, $ease: ease-out) {
   opacity: 0;

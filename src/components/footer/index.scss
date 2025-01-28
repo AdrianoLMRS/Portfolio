@@ -1,14 +1,19 @@
 @use '@styles/variables' as *;
 
+$padding-shared: 20px;
+
 .footer {
     > p {
-        padding-bottom: 20px;
+        padding-bottom: $padding-shared;
         > a {
             text-decoration: none;
             &:hover {
                 text-decoration: underline !important;
             }
         }
+    }
+    .social {
+        padding-top: $padding-shared;
     }
     padding: 50px;
     text-align: center;

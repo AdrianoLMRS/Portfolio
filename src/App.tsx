@@ -6,6 +6,7 @@ import '@styles/App.scss';
 import Navbar from '@components/navbar/Navbar';
 import Footer from '@components/footer/Footer';
 import Main from '@components/main/Main';
+import BackToHome from '@components/others/backToHome';
 
 declare global {
   interface Window {
@@ -16,9 +17,10 @@ declare global {
 function App() {
     return (
         <>
-            <Navbar/>
-            <Main/>
-            <Footer/>
+            <Navbar />
+            <Main />
+            <Footer />
+            <BackToHome />
         </>
     );
 }
