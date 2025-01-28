@@ -5,8 +5,6 @@
 Acesse aqui: [https://portfolio-adriano-p4dj.onrender.com](https://portfolio-adriano-p4dj.onrender.com/)
 <br>
 
-<hr>
-
 ## My personal website!
 
 Access here: [https://portfolio-adriano-p4dj.onrender.com](https://portfolio-adriano-p4dj.onrender.com/)
