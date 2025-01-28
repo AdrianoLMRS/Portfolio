@@ -12,9 +12,9 @@ Access here: [https://portfolio-adriano-p4dj.onrender.com](https://portfolio-adr
 
 ### Stack &nbsp; 💪
 
-| Frontend     | Backend    | Ferramentas     |
-|--------------|------------|-----------------|
-| React        | Node       | Docker          |
-| Typescript   |            | Nginx           |
-| Sass         |            | ESlint          |
-| Javascript   |            |                 |
+| Frontend     | Backend    | Ferramentas     | Deploy          |
+|--------------|------------|-----------------|-----------------|
+| Typescript   | Node       | Nginx           | Docker          |
+| Sass         |            | ESlint          | Render          |
+| React        |            |                 | Github Actions  |
+| Javascript   |            |                 |                 |
