@@ -90,18 +90,18 @@ $max-z-index: 100;
 $padding: 50px;
 
 :root {
-    --primary: #{$primary};
-    --primary-light: #{$primary-light};
-    --secondary: #{$secondary};
+    --primary: #{ $primary };
+    --primary-light: #{ $primary-light };
+    --secondary: #{ $secondary };
 
     font-family: $font-family;
     font-size: size(regular1);
     background-color: var(--primary);
     color: var(--secondary);
 
-    --sx-breakpoint: #{$breakpoint-sx};
-    --sm-breakpoint: #{$breakpoint-sm};
-    --md-breakpoint: #{$breakpoint-md};
-    --lg-breakpoint: #{$breakpoint-lg};
-    --xl-breakpoint: #{$breakpoint-xl};
+    --sx-breakpoint: #{ $breakpoint-sx };
+    --sm-breakpoint: #{ $breakpoint-sm };
+    --md-breakpoint: #{ $breakpoint-md };
+    --lg-breakpoint: #{ $breakpoint-lg };
+    --xl-breakpoint: #{ $breakpoint-xl };
 }

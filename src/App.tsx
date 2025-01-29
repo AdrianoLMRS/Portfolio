@@ -7,6 +7,7 @@ import Navbar from '@components/navbar/Navbar';
 import Footer from '@components/footer/Footer';
 import Main from '@components/main/Main';
 import BackToHome from '@components/others/backToHome';
+import ThemeBtn from '@components/others/themeBtn';
 
 declare global {
   interface Window {
@@ -21,6 +22,7 @@ function App() {
             <Main />
             <Footer />
             <BackToHome />
+            <ThemeBtn />
         </>
     );
 }
