@@ -3,7 +3,7 @@
 
 .card {
     border-radius: $border-radius-card;
-    background-color: $primary-light;
+    background-color: var(--primary-light);
 
     box-shadow: pVar.$box-shadow;
     $_border-color: pVar.$border-color;

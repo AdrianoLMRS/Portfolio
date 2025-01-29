@@ -3,7 +3,7 @@
 @forward '@styles/highlight';
 
 .about {
-    background-color: $primary-light;
+    background-color: var(--primary-light);
 
     .content {
         width: 100%;
@@ -26,7 +26,7 @@
             font-size: size(regular-medium);
             font-weight: normal;
             mark {
-                color: $secondary !important;
+                color: var(--secondary) !important;
             }
             padding-top: $padding;
         }

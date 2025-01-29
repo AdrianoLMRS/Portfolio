@@ -44,18 +44,18 @@
 }
   
 .button1 {
-    @include button-shared-styles($secondary, $primary);
-    @include button-focus($secondary, rgba(255, 255, 255, 0.8));
+    @include button-shared-styles(var(--secondary), var(--primary));
+    @include button-focus(var(--secondary), rgba(255, 255, 255, 0.8));
     @include button-active;
 }
   
 .button2 {
-    @include button-shared-styles($primary, $secondary);
-    @include button-focus($primary, rgba(0, 0, 0, 0.8));
+    @include button-shared-styles(var(--primary), var(--secondary));
+    @include button-focus(var(--primary), rgba(0, 0, 0, 0.8));
     @include button-active;
 
     &:hover {
-        @include button-shared-styles($secondary, $primary);
+        @include button-shared-styles(var(--secondary), var(--primary));
     }
 }
 

@@ -37,6 +37,7 @@ $transition-default: all 300ms ease-in;
 $primary: #191919;
 $primary-light: lighten($color: $primary, $amount: 2%);
 $secondary: rgb(255, 250, 250); // #fffafa
+$secondary-dark: darken($color: $secondary, $amount: 2%);
 $color3: #6E8894;
 $color4: #BC4B51;
 $color5: #FF220C;
@@ -89,10 +90,14 @@ $max-z-index: 100;
 $padding: 50px;
 
 :root {
+    --primary: #{$primary};
+    --primary-light: #{$primary-light};
+    --secondary: #{$secondary};
+
     font-family: $font-family;
     font-size: size(regular1);
-    background-color: $primary;
-    color: $secondary;
+    background-color: var(--primary);
+    color: var(--secondary);
 
     --sx-breakpoint: #{$breakpoint-sx};
     --sm-breakpoint: #{$breakpoint-sm};

@@ -12,7 +12,7 @@ nav.sidebar {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: $secondary;
+    background-color: var(--secondary);
 
     .nav-ul {
         list-style-type: none;
@@ -31,7 +31,7 @@ nav.sidebar {
     position: absolute;
     background-image: url(@public/menu.svg);
     background-size: contain;
-    background-color: $primary;
+    background-color: var(--primary);
     border-top-left-radius: $border-radius-btn;
     border-bottom-left-radius: $border-radius-btn;
     right: 1px;

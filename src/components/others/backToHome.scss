@@ -10,7 +10,7 @@ $pos: 20px;
 .backHome {
     @include widget($r: $pos, $b: $pos);
     
-    // background-color: $secondary;
+    // background-color: var(--secondary);
     transition: transform 200ms;
 
     &:hover {

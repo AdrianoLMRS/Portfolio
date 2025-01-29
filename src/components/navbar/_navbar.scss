@@ -23,7 +23,7 @@ nav.navbar {
         padding: 25px 35px 25px 35px;
     }
     .nav-item {
-        --_color: $secondary;
+        --_color: var(--secondary);
         text-decoration: none;  
         font-weight: weight(bold);
         letter-spacing: 1px;
