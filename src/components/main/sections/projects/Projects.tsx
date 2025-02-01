@@ -14,7 +14,7 @@ function Home() {
 
     const pousadaTao = projectsInfo.pousadaTao;
     const imageToAscii = projectsInfo.imageToAscii;
-    const wip = async () => {  window.alert('WIP - Em desenvolvimento\n\nWIP - Work in progress');  };
+    // const wip = async () => {  window.alert('WIP - Em desenvolvimento\n\nWIP - Work in progress');  };
 
     return(
         <section className="projects" id="projects">
@@ -22,7 +22,7 @@ function Home() {
                 <h2>Projetos</h2>
                 <div className="projects-container" >
                     <ScrollAnimation className='project-animator' threshold={ 0.2 }>
-                        <Card 
+                        <Card // Pousada TAO
                             images={[
                                 'https://iili.io/2gmKuTl.webp', 
                                 'https://iili.io/2gmKIp4.webp',
@@ -32,11 +32,11 @@ function Home() {
                             title={pousadaTao.title}
                             text={pousadaTao.main}
                             github={links.portfolioGithub}
-                            onClick={wip}
+                            action={links.pousadaTao}
                         />
                     </ScrollAnimation>
                     <ScrollAnimation className="project-animator" threshold={ 0.2 }>
-                        <Card 
+                        <Card // Image to ASCII
                             images={[
                                 'https://iili.io/2LykzMv.webp', 
                                 'https://iili.io/2LykxoJ.webp',
@@ -47,7 +47,7 @@ function Home() {
                             title={imageToAscii.title}
                             text={imageToAscii.main}
                             github={links.imageToAscii}
-                            onClick={wip}
+                            action={'javascript:void(0)'}
                         />
                     </ScrollAnimation>
 
