@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import navItems from '@utils/navItems';
-import navData from './_data';
+import navData from './_data.tsx';
 import { positionNavbar } from './_utils.tsx';
 import { getCssVariable } from '@utils/misc';
 import './index.scss';
