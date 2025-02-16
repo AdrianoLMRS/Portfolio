@@ -37,7 +37,7 @@
             display: inline-flex;
             justify-content: space-between;
             white-space: nowrap;
-            @media (max-width: $breakpoint-sx) {
+            @media (max-width: $breakpoint-sm) {
                 a {
                     padding: 10px;
                 }

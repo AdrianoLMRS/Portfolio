@@ -19,7 +19,6 @@ $scale: 40px;
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        opacity: 0;
         width: $scale;
         height: $scale;
         font-size: 1rem;
@@ -32,6 +31,14 @@ $scale: 40px;
         border-radius: 50%;
         transition: opacity $transition;
 
+        @media (hover: none) {
+            opacity: 1 !important; // For touch devices
+        }
+
+        @media not (hover: none) {
+            opacity: 0;
+        }
+
         &:hover {
             opacity: 1 !important;
         }
@@ -41,7 +48,6 @@ $scale: 40px;
         max-width: 100%;
         border-radius: 8px;
         transition: transform $transition;
-
     }
 
     &:hover {
