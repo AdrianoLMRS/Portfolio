@@ -16,10 +16,12 @@ export const positionNavbar = async (): Promise<void> => {
             nav.style.transition = 'right 300ms ease-in';
             nav.style.right = '0';
             btn.style.right = '90vw';
+            btn.style.marginRight = '0';
         } else {
             nav.style.right = '-90vw';
             btn.style.right = '0';
             await sleep(300);
+            btn.style.marginRight = '14px';
             nav.style.transition = ''; // Clear transition after animation
         }
     } catch (error) {
