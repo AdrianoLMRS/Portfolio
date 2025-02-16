@@ -29,6 +29,11 @@
                 color: var(--secondary) !important;
             }
             padding-top: $padding;
+            
+        }
+        @media (max-width: $breakpoint-sx) {
+            text-align: center;
+            padding: 10px 0 10px 0 ;
         }
     }
 
