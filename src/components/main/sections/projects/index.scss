@@ -6,6 +6,11 @@
 
     .content {
         padding: $padding;
+
+        @media (max-width: $breakpoint-sx) {
+            padding: 0;
+            h2 { text-align: center; }
+        }
     }
 
     .projects-container {

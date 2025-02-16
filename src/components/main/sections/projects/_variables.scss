@@ -1,5 +1,5 @@
 $padding: 25px;
-$card-width: 400px;
+$card-width: clamp(220px, 400px, 50vw);
 $border-color: #2b2b2d;
 
 $card-box-shadow-1: rgba(0, 0, 0, 0.05);
