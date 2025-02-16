@@ -38,7 +38,7 @@
     }
 
     .stack-container {
-        min-width: 600px;
+        min-width: clamp(40vw, 600px, 80vw);
 
         h2 {
             text-align: center;
@@ -47,8 +47,7 @@
         .img-container {
             margin-top: 25px;
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(3, auto); 
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
             gap: $gap-big;
 
             .item {
@@ -66,9 +65,7 @@
                     max-width: local.$img-size;
                     max-height: local.$img-size;
                 }
-
             }
-
         }
       }
       
